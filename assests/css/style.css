@@ -64,6 +64,7 @@ img {
 .header_getTrello {
     background-color: rgb(0, 101, 255);
     color: rgb(255, 255, 255);
+    padding: 0.9rem 1.5rem;
 }
 
 .header_getTrello:hover {
@@ -86,28 +87,24 @@ h1 {
     font-size: 2.813;
     font-weight: 500;
     line-height: 60px;
-    letter-spacing: 1.12px;
 }
 
 h2 {
     font-size: 2.25rem;
     font-weight: 500;
     line-height: 1.33333;
-    letter-spacing: 1.12px;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: 1.12px;
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: 1.12px;
 }
 
 p {
@@ -146,6 +143,7 @@ p {
 
 .fs-24 {
     font-size: 24px;
+    line-height: 1.5;
 }
 
 .fs-48 {
@@ -169,33 +167,25 @@ p {
     border-color: white;
 }
 
-.video-container {
+.video-container a, svg {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
 }
-
-.btn-secondary {
-    background: rgb(0, 101, 255);
-    color: white;
-    border-radius: 0;
+.video-container a, .video-container > svg {
+    align-items: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: inline-flex;
+    text-align: center;
+    transition: all 250ms ease-out 0s;
+    font-size: 1rem;
 }
-
-.btn-secondary:focus {
-    color: white;
-    background-color: rgb(0, 101, 255);
-    box-shadow: none;
-}
-
-.btn-secondary:active:focus {
-    box-shadow: none;
-    background-color: rgb(0, 101, 255);
+.btn-primary {
     color: white;
 }
 
-.btn-secondary:hover {
-    color: white;
+.btn-primary:hover {
     background-color: rgb(7, 71, 166);
-    border-color: rgb(7, 71, 166);
 }
 
 /* hero section end */
@@ -300,13 +290,15 @@ p {
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
 }
 
-.blogIcon-1 {
-    color: rgb(135, 119, 217);
-    width: 3rem;
+.card_box_shadow h3 {
+    font-size: 16px;
 }
 
-.blogIcon-2 {
-    width: 3rem;
+.blog_icon_a {
+    color: rgb(135, 119, 217);
+}
+
+.blog_icon_b {
     color: rgb(0, 199, 229);
 }
 
@@ -372,13 +364,17 @@ p {
     max-width: 9rem;
 }
 
+.border-center p {
+    font-size: 15px;
+}
+
 .survey img {
     max-height: 2.25rem;
     max-width: 100%;
     width: auto;
 }
 
-.surveyCard_padding{
+.surveyCard_padding {
     padding: 2.5rem 2rem;
 }
 
@@ -479,12 +475,12 @@ p {
 
 /* pricing cards-Container End*/
 
-.ford-section h2 {
+.gradient-section h2 {
     font-size: 2.25rem;
     line-height: 1.33333;
 }
 
-.ford-section {
+.gradient-section {
     background: url(/assests/images/BigSwingFooterHeroGraphic__Left.svg) left center / contain no-repeat scroll padding-box border-box, url(/assests/images/BigSwingFooterHeroGraphic__Right.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
 }
 
@@ -503,6 +499,7 @@ p {
 }
 
 .footer-icon a {
+    fill: rgb(255, 255, 255);
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
     height: 26px;
@@ -531,29 +528,40 @@ p {
         line-height: 1.25;
     }
 
-    h2 {
-        font-size: 30px;
-    }
 
     h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     p {
-        font-size: 16px;
+        font-size: 19px;
+    }
+
+    .fs-12 {
+        line-height: 1.7;
+        font-size: 10px;
+    }
+
+    .fs-16 {
+        font-size: 14px;
+        margin-bottom: 0;
     }
 
     .fs-18 {
         font-size: 14px;
     }
 
-    .btn {
-        padding: 14px 20px;
+    .fs-20 {
+        font-size: 18px;
+        line-height: 30px;
     }
 
-    .header_a {
-        color: rgb(23, 43, 77);
-        padding: 0.9rem 1.5rem;
+    .fs-22 {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 13px 24px;
     }
 }
 
@@ -574,18 +582,55 @@ p {
     p {
         font-size: 16px;
     }
-
-    .active h3 {
-        font-size: 16px;
+    .btn {
+        padding: 13px 24px;
+    }
+    .fs-12 {
+        font-size: 12px;
+        line-height: 1.7;
     }
 
+    .fs-16 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .fs-20 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .fs-24 {
+        font-size: 23px;
+        line-height: 1.5;
+    }
+
+    .swiper-text h3 {
+        font-size: 2.1rem;
+        line-height: 1.33333;
+    }
+
+    .survey img {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .blog_icon_b,
+    .blog_icon_a {
+        display: none;
+    }
+
+    .border-line-top,
     .border-line-bottom {
         border-bottom: 1px solid rgb(80, 95, 121);
-        width: 96%;
-        padding-left: 2rem;
+        width: 100%;
     }
 
-    .ford-section-md {
+    .border-line {
+        display: none;
+    }
+
+    .gradient-section-md {
         background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
         background-blend-mode: normal;
     }
@@ -599,13 +644,16 @@ p {
     h2 {
         font-size: 26px;
     }
-
+    h3 {
+        font-size: 1rem;
+    }
     p {
         font-size: 15px;
     }
 
     .btn {
-        padding: 13px 88px;
+        padding: 13px 24px;
+        width: 100%;
     }
 
 }
@@ -622,22 +670,45 @@ p {
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     h2 {
         font-size: 24px;
     }
 
-    h3 {
-        font-size: 16px;
-    }
-
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .btn {
-        padding: 13px 88px;
+        padding: 13px 24px;
+        width: 100%;
+    }
+    .fs-16 {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .fs-20 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .fs-22 {
+        font-size: 19px;
+    }
+    .swiper-text h3 {
+        font-size: 1.4rem;
+        line-height: 1.33333;
+    }
+    .gradient-section h2 {
+        font-size: 1.5rem;
+        line-height: 1.33333;
+    }
+    .form-control {
+        display: none;
+    }
+    .swiper-nav-wrapper {
+        right: 80px;
+        z-index: 1;
     }
 }
