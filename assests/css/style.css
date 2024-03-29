@@ -167,21 +167,23 @@ p {
     border-color: white;
 }
 
-.video-container a, svg {
-    cursor: pointer;
+.video_button a {
     color: rgba(255, 255, 255, 0.8);
 }
-.video-container a, .video-container > svg {
+.video_button a, .video_button > span {
     align-items: center;
     border-radius: 0.3rem;
     cursor: pointer;
     display: inline-flex;
     text-align: center;
-    transition: all 250ms ease-out 0s;
+    transition: all 250ms ease-out 10s;
     font-size: 1rem;
 }
-.btn-primary {
-    color: white;
+.video_button a:hover {
+    color: rgb(255, 255, 255);
+}
+.video_button a:hover svg{
+    transform: translate3d(3px, 0px, 0px);
 }
 
 .btn-primary:hover {
