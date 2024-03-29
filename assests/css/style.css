@@ -260,6 +260,7 @@ p {
     right: 130px;
     z-index: 1;
 }
+
 .swiper-nav-wrapper svg path {
     stroke: rgb(122, 134, 154);
 }
@@ -295,7 +296,7 @@ p {
     background-blend-mode: normal, normal, normal;
 }
 
-.box-shadow {
+.card_box_shadow {
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
 }
 
@@ -319,7 +320,7 @@ p {
 .Blog_button a:hover {
     background-color: rgb(222, 235, 255);
     border-color: rgb(0, 101, 255);
-    color: rgb(23, 43, 77) !important;
+    color: rgb(23, 43, 77);
 }
 
 .Blog-card {
@@ -343,7 +344,7 @@ p {
 .Trello-card a:hover {
     background-color: rgb(222, 235, 255);
     border-color: rgb(0, 101, 255);
-    color: rgb(23, 43, 77) !important;
+    color: rgb(23, 43, 77);
 }
 
 /* Cards End */
@@ -375,6 +376,10 @@ p {
     max-height: 2.25rem;
     max-width: 100%;
     width: auto;
+}
+
+.surveyCard_padding{
+    padding: 2.5rem 2rem;
 }
 
 .swiper-text h3 {
@@ -462,14 +467,14 @@ p {
 .Sign-up-button a {
     border: 1px solid rgb(0, 184, 217);
     padding: 0.7rem 1rem 0.8rem;
-    color: rgb(23, 43, 77) !important;
+    color: rgb(23, 43, 77);
 }
 
 .Sign-up-button a:hover {
     border: 1px solid rgb(0, 184, 217);
     background-color: rgb(230, 252, 255);
     border-color: rgb(0, 184, 217);
-    color: rgb(23, 43, 77) !important;
+    color: rgb(23, 43, 77);
 }
 
 /* pricing cards-Container End*/
@@ -504,11 +509,11 @@ p {
     width: 26px;
 }
 
-.bg-section1 {
+.survey_card-section {
     background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
 }
 
-.bg-section2 {
+.trello_heading_section {
     background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
 }
 
