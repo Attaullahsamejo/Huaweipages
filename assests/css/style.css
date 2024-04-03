@@ -171,13 +171,7 @@ p {
     color: rgba(255, 255, 255, 0.8);
 }
 .video_button a, .video_button > span {
-    align-items: center;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    display: inline-flex;
-    text-align: center;
     transition: all 250ms ease-out 10s;
-    font-size: 1rem;
 }
 .video_button a:hover {
     color: rgb(255, 255, 255);
@@ -240,7 +234,7 @@ p {
 .swiper-avatar {
     border-style: solid;
     border-width: 8px;
-    width: 3rem;
+    max-width: 12%;
     top: 28px;
 }
 
