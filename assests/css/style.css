@@ -84,9 +84,10 @@ img {
 }
 
 h1 {
-    font-size: 2.813;
+    font-size: 3rem;
     font-weight: 500;
     line-height: 60px;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -115,10 +116,6 @@ p {
     margin-bottom: 0;
 }
 
-.fs-11 {
-    font-size: 11px;
-}
-
 .fs-12 {
     font-size: 12px;
 }
@@ -135,10 +132,6 @@ p {
 .fs-20 {
     font-size: 20px;
     line-height: 30px;
-}
-
-.fs-22 {
-    font-size: 22px;
 }
 
 .fs-24 {
@@ -159,7 +152,6 @@ p {
 
 .form-control {
     padding: 12px 24px;
-    width: 304px;
 }
 
 .form-control:focus {
@@ -230,7 +222,11 @@ p {
     height: 63%;
     padding: 2.25rem 1.5rem 1.5rem;
 }
+.swiper_img{
+    max-width: 115%;
+    height: 30px;
 
+}
 .swiper-avatar {
     border-style: solid;
     border-width: 8px;
@@ -284,10 +280,6 @@ p {
 
 .card_box_shadow {
     box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
-}
-
-.card_box_shadow h3 {
-    font-size: 16px;
 }
 
 .blog_icon_a {
@@ -358,10 +350,6 @@ p {
     height: 1px;
     margin-bottom: 1rem;
     max-width: 9rem;
-}
-
-.border-center p {
-    font-size: 15px;
 }
 
 .survey img {
@@ -552,10 +540,6 @@ p {
         line-height: 30px;
     }
 
-    .fs-22 {
-        font-size: 18px;
-    }
-
     .btn {
         padding: 13px 24px;
     }
@@ -689,9 +673,7 @@ p {
         font-size: 18px;
         line-height: 30px;
     }
-    .fs-22 {
-        font-size: 19px;
-    }
+    
     .swiper-text h3 {
         font-size: 1.4rem;
         line-height: 1.33333;
