@@ -2,985 +2,1369 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trello</title>
-  <link rel="icon" type="image/x-icon" href="assests/images/trello-logo.png">
-  <!-- BOOTSTRAP CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <!-- TRELLO CSS FILE -->
-  <link rel="stylesheet" href="assests/css/Swiper.css">
-  <link rel="stylesheet" href="assests/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huawei</title>
+    <link rel="icon" type="image/x-icon" href="assests/images/trello-logo.png">
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+    <!-- TRELLO CSS FILE -->
+    <link rel="stylesheet" href="assests/css/swiper.css">
+    <link rel="stylesheet" href="assests/css/style.css">
 </head>
 
 <body>
-  <!-- header start -->
-  <div class=" nav-section position-fixed top-0 bg-white pe-0 py-0 nav-bar-scroll">
-    <section class="container-fluid mx-auto">
-      <div class="row">
-        <div class="col-12 pe-0">
-          <nav class="navbar py-0 navbar-expand-lg " data-navbar-on-scroll="data-navbar-on-scroll">
+    <!-- header start -->
+    <section class="header_section pt-3">
+        <section class="nav-section px-2 position-fixed top-0 start-0 end-0 header_section nav-bar-scroll">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <svg aria-label="Atlassian Trello" height="37.5" role="img" viewBox="0 0 312 105"
-                  width="111.42857142857143" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" class="Logo-sc-1anfgcw-0 gguOta">
-                  <linearGradient id="trello-logo-gradient-defaultMJFtCCgVhXrVl7v9HA7EH" x1="49.992%" x2="49.992%"
-                    y1="100%" y2=".016%">
-                    <stop offset="0" stop-color="#0052cc"></stop>
-                    <stop offset="1" stop-color="#2684ff"></stop>
-                  </linearGradient>
-                  <path
-                    d="m55.3 40.6h-47.5c-4.1 0-7.4 3.3-7.4 7.4v47.6c0 4.1 3.3 7.4 7.4 7.4h47.5c4.1 0 7.4-3.3 7.4-7.4v-47.6c0-4.1-3.3-7.4-7.4-7.4zm-28.1 44.9c0 1.4-1.1 2.5-2.5 2.5h-10.4c-1.4 0-2.5-1.1-2.5-2.5v-30.9c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5zm24-14.2c0 1.4-1.1 2.5-2.4 2.5h-10.5c-1.4 0-2.5-1.1-2.5-2.5v-16.7c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5z"
-                    fill="url(#trello-logo-gradient-defaultMJFtCCgVhXrVl7v9HA7EH)"></path>
-                  <g fill="#253858" transform="translate(87 40)">
-                    <path d="m42.6 5.2v12.1h-14.3v45.7h-13.8v-45.8h-14.3v-12z"></path>
-                    <path d="m60.2 63h-12.7v-45h12.7v8.6c2.4-6.1 6.3-9.7 13.2-9.2v13.3c-9-.7-13.2 1.5-13.2 8.7z"></path>
-                    <path
-                      d="m143 63.4c-8.4 0-13.6-4-13.6-13.5v-49.3h12.8v47.5c0 2.7 1.8 3.7 4 3.7.6 0 1.3 0 1.9-.1v11.1c-1.7.4-3.4.6-5.1.6z">
-                    </path>
-                    <path
-                      d="m169.8 63.4c-8.4 0-13.6-4-13.6-13.5v-49.3h12.8v47.5c0 2.7 1.8 3.7 4 3.7.6 0 1.3 0 1.9-.1v11.1c-1.7.4-3.4.6-5.1.6z">
-                    </path>
-                    <path
-                      d="m181 40.5c0-13.9 8-23.4 21.8-23.4s21.6 9.5 21.6 23.4-7.9 23.6-21.6 23.6-21.8-9.8-21.8-23.6zm12.5 0c0 6.8 2.8 12.1 9.3 12.1s9.1-5.4 9.1-12.1-2.8-12-9.1-12-9.3 5.2-9.3 12z">
-                    </path>
-                    <path
-                      d="m90.6 44.6c3.6.4 7.2.6 10.7.6 9.8 0 18-2.6 18-12.1 0-9.2-8.5-16.1-18.7-16.1-13.7 0-22.5 10-22.5 23.8 0 14.4 7.6 23 24.7 23 5.1.1 10.1-.8 14.9-2.6v-10.8c-4.4 1.4-9.4 2.8-14.4 2.8-6.8.1-11.5-2.2-12.7-8.6zm9.8-17.7c3.6 0 6.5 2.4 6.5 5.8 0 4.3-4.6 5.7-9.8 5.7-2.2 0-4.5-.2-6.7-.5.2-2.1.8-4.1 1.8-6 1.6-3.1 4.8-5 8.2-5z">
-                    </path>
-                  </g>
-                  <g fill="#0052cc" transform="translate(94)">
-                    <path
-                      d="m98.9 16.7c0-4-2.6-5.8-7.4-7-3-.8-3.7-1.4-3.7-2.4 0-1.2 1.1-1.8 3.1-1.8 2.4.1 4.8.7 7 1.8v-5c-2.1-1-4.5-1.5-6.8-1.5-5.3 0-8.2 2.5-8.2 6.6 0 3.9 2.6 5.9 7 6.9 3.1.7 4 1.2 4 2.5 0 1-.7 1.8-3 1.8-2.8-.1-5.6-.9-8.1-2.3v5.3c2.5 1.2 5.2 1.9 8 1.9 5.4 0 8.1-2.7 8.1-6.8z">
-                    </path>
-                    <path d="m159.3 1.2v22h4.7v-16.8l2 4.4 6.6 12.3h5.9v-22h-4.7v14.2l-1.8-4.1-5.3-10.1h-7.4z"></path>
-                    <path d="m129.6 1.2h-5.1v22h5.1z"></path>
-                    <path d="m43.2 1.2v22h10.5l1.6-4.8h-7v-17.2z"></path>
-                    <path d="m22.4 1.2v4.8h5.7v17.2h5.1v-17.2h6.1v-4.8z"></path>
-                    <path
-                      d="m15 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.4 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.8.4-2.8.4z">
-                    </path>
-                    <path
-                      d="m71.7  1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.3 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.9.4-2.8.4z">
-                    </path>
-                    <path
-                      d="m148 1.2h-6.7l-7.7 22h5.9l1.1-3.7c1.3.4 2.7.6 4.1.6s2.8-.2 4.1-.6l1.1 3.7h5.9zm-3.4 14.3c-1 0-1.9-.1-2.8-.4l2.8-9.6 2.8 9.6c-.9.3-1.8.4-2.8.4z">
-                    </path>
-                    <path
-                      d="m119.2 16.7c0-4-2.6-5.8-7.4-7-3-.8-3.7-1.4-3.7-2.4 0-1.2 1.1-1.8 3-1.8 2.4.1 4.8.7 7 1.8v-5c-2.2-1-4.5-1.5-6.9-1.5-5.3 0-8.2 2.5-8.2 6.6 0 3.9 2.6 5.9 7 6.9 3.1.7 4 1.2 4 2.5 0 1-.7 1.8-3 1.8-2.8-.1-5.6-.9-8.1-2.3v5.3c2.5 1.2 5.2 1.9 8 1.9 5.7 0 8.3-2.7 8.3-6.8z">
-                    </path>
-                  </g>
-                </svg> </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content position-absolute">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
+                <nav class="navbar navbar-expand-lg py-0 gap-0 gap-lg-5">
+                    <a class="navbar-brand me-0" href="/">
+                        <img src="assests/images/huawei-ar21.svg" alt="huawei-logo" title="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  mb-2 mb-lg-0 gap-lg-4">
+                            <li class="nav-item">
+                                <div>
+                                    <a title="Services" href="#services" class="link py-3">Services</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="Smartphone" href="#smartphone" class="link py-3">Smartphone</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="PC" href="#pc" class="link py-3">PC</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="Tablet" href="#tablet" class="link py-3">Tablet</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="Wearable" href="#waerable" class="link py-3">Wearable</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="Audio" href="#audio" class="link py-3">Audio</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="Vision" href="#vision" class="link py-3">Vision</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="Router" href="#router" class="link py-3">Router</a>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div>
+                                    <a title="HUAWEI Mobile Services" href="#waerable" class="link py-3">HUAWEIMobile Services</a>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+    
+                        <div class="d-flex ms-auto gap-4">
+                            <a title="Support" href="#support"
+                                class="header_a py-3 d-flex align-items-center text-decoration-none link">Support</a>
+                            <a title="Community" href="#community"
+                                class="header_a py-3 d-flex align-items-center text-decoration-none link">Community</a>
+                            <a title="Business" href="#business"
+                                class="header_a py-3 d-flex align-items-center text-decoration-none link">Business</a>
+                            <div class="search_button py-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solution</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content text-decoration-none position-absolute">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plans</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content position-absolute ">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Pricing</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="dropdown">
-                      <button class="dropbtn dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</button>
-                      <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content position-absolute">
-                        <a href class="text-decoration-none text-black bg-white">Link 1</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 2</a>
-                        <a href class="text-decoration-none text-black bg-white">Link 3</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div class="d-flex ms-auto">
-          <a href="#" class="header_a d-flex align-items-center text-decoration-none fs-18">Log in</a>
-          <a href="#" class="header_getTrello d-flex align-items-center text-decoration-none fs-18">Get Trello for free</a>
-        </div>
-              </div>
+                </nav>
             </div>
-          </nav>
+        </section>
+
+        <div class="container py-80 pb-1">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center align-items-center gap-md-5 gap-3">
+                        <a class="d-flex align-items-center flex-column">
+                                <div>
+                                    <img src="assests/images/nav-laptops.svg" alt="Laptop" class="mb-3">
+                                </div>
+                                <div><span class="fw-lighter link">Laptop</span></div>
+                        </a>
+                        <a class="d-flex align-items-center flex-column">
+                                <div>
+                                    <img src="assests/images/nav-monitor.svg" alt="Monitor" class="mb-3">
+                                </div>
+                                <div><span class="fw-lighter link">Monitor</span></div>
+                        </a>
+                        <a class="d-flex align-items-center flex-column">
+                                <div>
+                                    <img src="assests/images/nav-desktop.svg" alt="Desktop" class="mb-3">
+                                </div>
+                                <div><span class="fw-lighter link">Desktop</span></div>
+                        </a>
+                        <a class="d-flex align-items-center flex-column">
+                                <div>
+                                    <img src="assests/images/nav-printer.svg" alt="Printer" class="mb-3">
+                                </div>
+                                <div><span class="fw-lighter link">Printer</span></div>
+                        </a>
+                        <a class="d-flex align-items-center flex-column">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                        class="bi bi-mouse2 mb-3" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 5.188C3 2.341 5.22 0 8 0s5 2.342 5 5.188v5.625C13 13.658 10.78 16 8 16s-5-2.342-5-5.188V5.189zm4.5-4.155C5.541 1.289 4 3.035 4 5.188V5.5h3.5zm1 0V5.5H12v-.313c0-2.152-1.541-3.898-3.5-4.154M12 6.5H4v4.313C4 13.145 5.81 15 8 15s4-1.855 4-4.188z" />
+                                    </svg>
+                                </div>
+                                <div><span class="fw-lighter link">Accessories</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </div>
 
-  <!-- hero-section start-->
-  <section class="hero-section color-white">
-    <div class="container py-120">
-      <div class="row align-items-center">
-        <div class="col-12 col-lg-6">
-          <h1 class="text-lg-start text-center">Trello brings all your tasks, teammates, and tools together</h1>
-          <p class="mb-3 fs-20 text-center text-lg-start">Keep everything in the same place—even if your team isn’t.</p>
-          <div class="d-flex flex-wrap mb-4 gap-3 justify-content-center justify-content-lg-start">
-            <form>
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Email" class="form-control">
-              </div>
-            </form>
-            <a class="btn btn-primary rounded-2">Sign up-it's
-              free!</a>
-          </div>
-            <span>
-              <div class="video_button">
-                <a href="#video" class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
-                  <span>Watch video</span>
-                  <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m5 5h14v14h-14z"></path><path clip-rule="evenodd" d="m10.0138 16.3878c-.83597.4912-1.5138.105-1.5138-.8645v-7.04491c0-.97008.6755-1.358 1.5138-.86566l6.465 3.79747c.5548.3261.5589.8517 0 1.1801z" fill="currentColor" fill-rule="evenodd"></path><circle cx="12" cy="12" r="11.5" stroke="currentColor"></circle></svg>
-                </a>
-              </div>
-            </span>
+    <div class="container py-80 pb-0">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="text-center">
+                    <p class="text_crimson">New</p>
+                    <h1 title="MateBook E Go">MateBook E Go</h1>
+                    <p class="fw-medium mb-4">Designed to Do More</p>
+                    <button title="Learn More"
+                        class="text-white bg-black rounded-1 mb-5 learn_more_btn fw-semibold border-0">Learn
+                        More</button>
+                </div>
+                <img src="assests/images/matebook-e-go-banner-kv.jpg" alt="matebook-image"
+                    title="matebook-e-go-banner-kv">
+                <div class="img-text p-2 d-flex gap-2">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                            class="bi bi-microsoft" viewBox="0 0 16 16">
+                            <path
+                                d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z" />
+                        </svg></div>
+                    <div>
+                        <p class="text-white fs-13">window | Get to know window 11</p>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-lg-6">
-          <div>
-            <img src="assests/images/image-1.webp" alt="">
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-  <!-- hero-section end-->
 
-  <!-- Trello101-Container Thumbnails start-->
-  <section class="Thumbnail-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-7 md-text-left p-3">
-          <div>
-            <p class="fw-medium fs-16 mb-1 text-uppercase">Trello 101</p>
-            <h2 class="pb-3">A productivity powerhouse</h2>
-          </div>
-          <div>
-            <p class="mb-4 fs-20">Simple, flexible, and powerful. All it takes are boards, lists, and cards to
-              get a clear view of who’s doing what and what needs to get done. Learn more in our
-              <a href="#">guide for getting started</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="Thumbnail-section">
-      <div class="container d-lg-flex gap-4">
-        <div class="thumbnail-container d-flex flex-column mb-3">
-          <div class="thumbnails d-flex flex-column">
-            <div class="thumbnail p-3 active bg-white rounded-3 position-relative text-left" data-index="0"
-              onclick="changeSlide(0)">
-              <h3 class="fs-16">Boards</h3>
-              <p class="fs-16">Trello boards keep tasks organized and work moving forward. In a
-                glance, see everything from “things to do” to “aww yeah, we did it!”</p>
+    <section class="header_section_Card">
+        <div class="container py-80">
+            <div class="row">
+                <h1 class="text-center mb-4">Which Series Is Best for You?</h1>
+                <div class="swiper-container-series overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card border-0 text-center rounded-4 mb-3">
+                                <div class="p-3">
+                                    <h2>MateBook X Series</h2>
+                                    <p class="fs-14 fw-light">A Sleek, Stylish Standout</p>
+                                </div>
+                                <div>
+                                    <img src="assests/images/matebook-x-series.jpg" class="p-1 rounded-4 rounded-top-0"
+                                        alt="matebook-x-series">
+                                    <div class="position-absolute arrow_down"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 text-center rounded-4 mb-3">
+                                <div class="p-3">
+                                    <h2>MateBook Series</h2>
+                                    <p class="fs-14 fw-light">Efficiency Enhanced</p>
+                                </div>
+                                <div>
+                                    <img src="assests/images/matebook-series.jpg" class="p-1 rounded-4 rounded-top-0"
+                                        alt="matebook-series">
+                                    <div class="position-absolute arrow_down"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 text-center rounded-4 mb-3">
+                                <div class="p-3">
+                                    <h2>MateBook E Series</h2>
+                                    <p class="fs-14 fw-light">PC & Tablet 2-in-1</p>
+                                </div>
+                                <div>
+                                    <img src="assests/images/matebook-e-series.jpg" class="p-1 rounded-4 rounded-top-0"
+                                        alt="matebook-e-series">
+                                    <div class="position-absolute arrow_down"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 text-center rounded-4">
+                                <div class="p-3">
+                                    <h2>MateBook D Series</h2>
+                                    <p class="fs-14 fw-light">Large-Screen immersion</p>
+                                </div>
+                                <div>
+                                    <img src="assests/images/matebook-d-series.jpg" class="p-1 rounded-4 rounded-top-0"
+                                        alt="matebook-d-series">
+                                    <div class="position-absolute arrow_down"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512">
+                                            <path
+                                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="thumbnail p-3 rounded-3" data-index="1" onclick="changeSlide(1)">
-              <h3 class="fs-16">Lists</h3>
-              <p class="fs-16">The different stages of a task. Start as simple as To Do, Doing or
-                Done—or build a workflow custom fit to your team’s needs. There’s no wrong way to Trello.</p>
-            </div>
-            <div class="thumbnail p-3 rounded-3" data-index="2" onclick="changeSlide(2)">
-              <h3 class="fs-16">Cards</h3>
-              <p class="fs-16">Cards represent tasks and ideas and hold all the information to get
-                the job done. As you make progress, move cards across lists to show their status.</p>
-            </div>
-          </div>
         </div>
-        <div class="main-slide overflow-hidden">
-          <div id="slick-slider">
-            <div><img class="" src="assests/images/thumbnails image.webp" alt="Main Slide 1"></div>
-            <div><img class="" src="assests/images/thumbnails image_2.webp" alt="Main Slide 2"></div>
-            <div><img class="" src="assests/images/thumbnails image_3.webp" alt="Main Slide 3"></div>
-          </div>
+
+        <div class="container py-80">
+            <h1 class="text-center mb-3">MateBook X Series</h1>
+            <p class="text-center mb-3">Flair With Style and Elegance</p>
+            <div class="row bg-white rounded-4 p-3">
+                <div class="container-grid" title="MateBook X Pro">
+                    <div><img src="assests/images/matebook-series-card-2.jpg" alt="matebook-x-series" class="h-100">
+                    </div>
+                    <div class="position-relative">
+                        <a href=""><img src="assests/images/matebook-series-card-2.jpg" alt="matebook-series">
+                            <div
+                                class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                                Skin-Soothing Metallic Body</div>
+                        </a>
+                    </div>
+                    <div class="position-relative">
+                        <img src="assests/images/matebook-series-card-3.jpg" alt="matebook-e-series">
+                        <div
+                            class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                            HUAWEI Real Color FullView Display</div>
+                        <div class="position-relative">
+                            <img src="assests/images/matebook-series-card-4.jpg" class="pt-1" alt="matebook-e-series">
+                            <div
+                                class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                                Super Device</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap flex-wrap justify-content-between align-items-center pt-5 mb-3">
+                    <h3>MateBook 16s</h3>
+                    <button class="btn text-white bg-black rounded-1 fs-13 fw-semibold">Learn More</button>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="container py-80">
+            <h1 class="text-center mb-3">MateBook Series</h1>
+            <p class="text-center mb-3">Powers a More Productive You</p>
+            <div class="row bg-white rounded-3 p-3">
+                <div class="container-grid" title="MateBook 16s">
+                    <div><img src="assests/images/matebook-series.jpg" alt="matebook-x-series" class="h-100"></div>
+                    <div class="position-relative">
+                        <img src="assests/images/matebook-series-card-2 (1).jpg" alt="matebook-series">
+                        <div
+                            class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                            2.5k True Color Touch Display</div>
+                    </div>
+                    <div class="position-relative">
+                        <img src="assests/images/matebook-series-card-3 (1).jpg" alt="matebook-series-card-3 (1)">
+                        <div
+                            class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                            13 Gen Intel<sup>®</sup> Core<sup>TM</sup> i9 Processor</div>
+                        <div class="position-relative">
+                            <img src="assests/images/matebook-series-card-4.jpg" class="pt-1"
+                                alt="matebook-series-card-4">
+                            <div
+                                class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                                Super Device</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap flex-wrap justify-content-between align-items-center pt-5 mb-3">
+                    <h3>MateBook 16s</h3>
+                    <button class="btn text-white bg-black rounded-1 fs-13 fw-semibold">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-80">
+            <div class="row">
+                <div class="swiper-container-cards overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 mb-3 h-100">
+                                <div class="card_body p-1">
+                                    <div class="text-center">
+                                        <img src="assests/images/matebook-14s-2023.png" alt="matebook-14s-2023"
+                                            class="w-50">
+                                    </div>
+                                    <div class="text-center">
+                                        <h2>MateBook 14s</h2>
+                                        <p class="fs-13 fw-light">2.5k HUAWEI FullView Display 13th Gen
+                                            Intel<sup>®</sup>
+                                            Core<sup>TM</sup> H-Series Processor</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#learnmore" class="btn fw-semibold fs-14">Learn More <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                            </svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 mb-3 h-100">
+                                <div class="card_body p-1">
+                                    <div class="text-center">
+                                        <img src="assests/images/matebook-13s.png" alt="matebook-13s" class="w-50">
+                                    </div>
+                                    <div class="text-center">
+                                        <h2>MateBook 13s</h2>
+                                        <p class="fs-13 fw-light">2.5k HUAWEI FullView Display 13th Gen
+                                            Intel<sup>®</sup>
+                                            Core<sup>TM</sup> H-Series Processor</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#learnmore" class="btn fw-semibold fs-14">Learn More <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                            </svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 mb-3 h-100">
+                                <div class="card_body p-1">
+                                    <div class="text-center">
+                                        <img src="assests/images/matebook-14-2023.png" alt="matebook-14-2023"
+                                            class="w-50">
+                                    </div>
+                                    <div class="text-center">
+                                        <h2>MateBook 14</h2>
+                                        <p class="fs-13 fw-light">2.5k HUAWEI FullView Display 13th Gen
+                                            Intel<sup>®</sup> Core
+                                            <sup>TM</sup> H-Series Processor
+                                        </p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#learnmore" class="btn fw-semibold fs-14">Learn More <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                            </svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 h-100">
+                                <div class="card_body p-1">
+                                    <div class="text-center">
+                                        <img src="assests/images/matebook-13.jpg" alt="matebook-13" class="w-50">
+                                    </div>
+                                    <div class="text-center">
+                                        <h2>MateBook 13</h2>
+                                        <p class="fs-13 fw-light">2.5k HUAWEI FullView Display 13th Gen
+                                            Intel<sup>®</sup> Core
+                                            <sup>TM</sup>H-Series Processor
+                                        </p>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#learnmore" class="btn fw-semibold fs-14">Learn More <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                            </svg></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-80">
+            <h1 class="text-center mb-3">MateBook E Series</h1>
+            <p class="text-center mb-3">Style and Colours That Matche You</p>
+            <div class="row bg-white rounded-4 p-3">
+                <div class="container-grid" title="MateBook E Go">
+                    <div><img src="assests/images/matebook-e-go-card-1.jpg" alt="matebook-e-go-card-1" class="h-100">
+                    </div>
+                    <div class="position-relative">
+                        <img src="assests/images/matebook-e-go-card-2.jpg" alt="matebook-e-go-card-2">
+                        <div
+                            class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                            120 Hz Eye Comfort HUAWEI FullView Display</div>
+                    </div>
+                    <div class="position-relative">
+                        <img src="assests/images/matebook-e-go-card-3.jpg" alt="matebook-e-go-card-3">
+                        <div
+                            class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                            Sleek Design and Long Battery Life</div>
+                        <div class="position-relative">
+                            <img src="assests/images/matebook-e-go-card-4.jpg" class="pt-1" alt="matebook-e-go-card-4">
+                            <div
+                                class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                                2-in-1 Laptop</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between align-items-center pt-5 mb-3">
+                    <div>
+                        <p class="text_crimson mb-2">New</p>
+                        <h3>MateBook E Go</h3>
+                    </div>
+                    <button class="btn text-white bg-black rounded-1 fs-13 fw-semibold">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row bg-white rounded-4 justify-content-center align-items-center gap-5">
+                <div class="col-lg-3 col-md-4 p-4">
+                    <div>
+                        <img src="assests/images/matebook-e-2022.jpg" alt="matebook-e-2022" title="MateBook E">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-4 p-4">
+                    <h3 title="MateBook E" class="mb-3">MateBook E</h3>
+                    <p class="fs-22 fw-light mb-3">HUAWEI OLED Real Colour FullView Display HUAWEI M-Pencil</p>
+                    <div>
+                        <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-80">
+            <h1 class="text-center mb-3">MateBook D Series</h1>
+            <p class="text-center mb-3">Your On-the-Go Office</p>
+            <div class="row bg-white rounded-4 p-3">
+                <div class="container-grid" title="MateBook D 14">
+                    <div><img src="assests/images/matebook-d-series-card-1-new.jpg" alt="matebook-e-go-card-1"
+                            class="h-100"></div>
+                    <div class="position-relative">
+                        <img src="assests/images/matebook-d-series-card-2-new.jpg" alt="matebook-e-go-card-2">
+                        <div
+                            class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                            Eye Comfort HUAWEI FullView Display</div>
+                    </div>
+                    <div class="position-relative">
+                        <img src="assests/images/matebook-d-series-card-3-new.jpg" alt="matebook-e-go-card-3">
+                        <div
+                            class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                            Super Device</div>
+                        <div class="position-relative">
+                            <img src="assests/images/matebook-d-series-card-4-new.jpg" class="pt-1"
+                                alt="matebook-e-go-card-4">
+                            <div
+                                class="series-banner-text fs-13 bg-black text-white position-absolute rounded-1 py-1 px-2 fw-light">
+                                HUAWEI Metaline Antenna</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between align-items-center pt-5 mb-3">
+                    <h3>MateBook D 14</h3>
+                    <button class="btn text-white bg-black rounded-1 fs-13 fw-semibold">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-80">
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <div class="d-flex align-items-center bg-white rounded-4 gap-5">
+                        <div>
+                            <img src="assests/images/matebook-d-16-2023.png" alt="matebook-e-2022" title="MateBook 13">
+                        </div>
+                        <div class="p-4">
+                            <div>
+                                <h2 class="fs-28">MateBook 13</h2>
+                                <p class="fs-20 fw-light mb-2">2.5k HUAWEI FullView Display 13th Gen Intel<sup>®</sup>
+                                    Core
+                                    <sup>TM</sup>H-Series Processor
+                                </p>
+                            </div>
+                            <div class="d-flex">
+                                <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 ">
+                    <div class="d-flex align-items-center bg-white rounded-4 gap-5">
+                        <div>
+                            <img src="assests/images/matebook-d-15-2022.png" alt="matebook-e-2022" title="MateBook 13">
+                        </div>
+                        <div class="p-4">
+                            <div>
+                                <h2 class="fs-28">MateBook 13</h2>
+                                <p class="fs-20 fw-light mb-2">2.5k HUAWEI FullView Display 13th Gen Intel<sup>®</sup>
+                                    Core
+                                    <sup>TM</sup>H-Series Processor
+                                </p>
+                            </div>
+                            <div class="d-flex">
+                                <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bg-white">
+            <div class="container py-80">
+                <div class="row">
+                    <h1 class="text-center mb-4">Which MatesBook Best Suits You?</h1>
+                    <!-- Slider main container -->
+                    <div class="swiper-container-matebook overflow-hidden">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assests/images/compare-laptopsmatebook-x-pro-2023-13th-gen-core-blue.jpg"
+                                    alt="" title="Matebook X Pro">
+                                <div class="text-center">
+                                    <h4 class="mb-4">Matebook X Pro</h4>
+                                    <button title="Learn More"
+                                        class="text-white bg-black rounded-2 mb-5 learn_more_btn fw-semibold border-0">Learn
+                                        More</button>
+                                    <div class="mb-4">
+                                        <h4>14.4 inches</h4>
+                                        <p class="fw-normal fs-13">3120×2080, 264 PPI</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>Windows 11 Home/ Windows 11 Pro</h4>
+                                        <p class="fw-normal fs-13">Operating system</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/cpu.svg" alt="cpu">
+                                        <p class="fw-normal fs-13">13th Gen Intel<sup>®</sup> Core<sup>TM</sup> i7-1360
+                                            Processor</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/graphics.svg" alt="graphics">
+                                        <p class="fw-normal fs-13">Intel<sup>®</sup> Iris<sup>®</sup> X<sup>e</sup>
+                                            Graphics</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>32GB</h4>
+                                        <p class="fw-normal fs-13">Maximum configurable storage</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>2 TB / 1TB</h4>
+                                        <p class="fw-normal fs-13">NVMe PCIe SSD</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/battery.svg" alt="battery">
+                                        <p class="fw-normal fs-13">60 wh (rated capacity)</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/camera.svg" alt="camera">
+                                        <p class="fw-normal fs-13">720P HD camera</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/audio.svg" alt="audio">
+                                        <p class="fw-normal fs-13">Microphone ×4 Speaker×6</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assests/images/compare-laptopsmatebook-x-pro-2023-13th-gen-core-blue.jpg"
+                                    alt="" title="Matebook X Pro">
+                                <div class="text-center">
+                                    <h4 class="mb-4">Matebook X Pro</h4>
+                                    <button title="Learn More"
+                                        class="text-white bg-black rounded-2 mb-5 learn_more_btn fw-semibold border-0">Learn
+                                        More</button>
+                                    <div class="mb-4">
+                                        <h4>14.4 inches</h4>
+                                        <p class="fw-normal fs-13">3120×2080, 264 PPI</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>Windows 11 Home/ Windows 11 Pro</h4>
+                                        <p class="fw-normal fs-13">Operating system</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/cpu.svg" alt="cpu">
+                                        <p class="fw-normal fs-13">13th Gen Intel<sup>®</sup> Core<sup>TM</sup> i7-1360
+                                            Processor</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/graphics.svg" alt="graphics">
+                                        <p class="fw-normal fs-13">Intel<sup>®</sup> Iris<sup>®</sup> X<sup>e</sup>
+                                            Graphics</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>32GB</h4>
+                                        <p class="fw-normal fs-13">Maximum configurable storage</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>2 TB / 1TB</h4>
+                                        <p class="fw-normal fs-13">NVMe PCIe SSD</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/battery.svg" alt="battery">
+                                        <p class="fw-normal fs-13">60 wh (rated capacity)</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/camera.svg" alt="camera">
+                                        <p class="fw-normal fs-13">720P HD camera</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/audio.svg" alt="audio">
+                                        <p class="fw-normal fs-13">Microphone×4 Speaker×6</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assests/images/compare-laptopsmatebook-x-pro-2023-13th-gen-core-blue.jpg"
+                                    alt="" title="Matebook X Pro">
+                                <div class="text-center">
+                                    <h4 class="mb-4">Matebook X Pro</h4>
+                                    <button title="Learn More"
+                                        class="text-white bg-black rounded-2 mb-5 learn_more_btn fw-semibold border-0">Learn
+                                        More</button>
+                                    <div class="mb-4">
+                                        <h4>14.4 inches</h4>
+                                        <p class="fw-light fs-13">3120×2080, 264 PPI</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>Windows 11 Home/ Windows 11 Pro</h4>
+                                        <p class="fw-normal fs-13">Operating system</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/cpu.svg" alt="cpu">
+                                        <p class="fw-normal fs-13">13th Gen Intel<sup>®</sup> Core<sup>TM</sup> i7-1360
+                                            Processor</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/graphics.svg" alt="graphics">
+                                        <p>Intel<sup>®</sup> Iris<sup>®</sup> X<sup>e</sup> Graphics</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>32GB</h4>
+                                        <p class="fw-normal fs-13">Maximum configurable storage</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4>2 TB / 1TB</h4>
+                                        <p class="fw-normal fs-13">NVMe PCIe SSD</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/battery.svg" alt="battery">
+                                        <p>60 wh (rated capacity)</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/camera.svg" alt="camera">
+                                        <p class="fw-normal fs-13">720P HD camera</p>
+                                    </div>
+                                    <div class="mb-4">
+                                        <img src="assests/images/audio.svg" alt="audio">
+                                        <p class="fw-normal fs-13">Microphone×4 Speaker×6</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container py-80">
+            <div class="row">
+                <h1 class="text-center mb-3">All Laptops</h1>
+                <!-- Slider main container -->
+                <div class="swiper-container-laptops overflow-hidden">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 d-flex justify-content-between h-100">
+                                <div>
+                                    <img src="assests/images/all-matebook-x-pro-2022.png" alt="">
+                                </div>
+                                <div>
+                                    <h3>MateBook X Pro 2022</h3>
+                                </div>
+                                <div class="pt-5">
+                                    <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 d-flex justify-content-between h-100">
+                                <div>
+                                    <img src="assests/images/all-matebook-14s-2022.jpg" alt="">
+                                </div>
+                                <div>
+                                    <h3>MateBook 14s 2022</h3>
+                                </div>
+                                <div class="pt-5">
+                                    <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 d-flex justify-content-between h-100">
+                                <div>
+                                    <img src="assests/images/all-matebook-14-2022.png" alt="">
+                                </div>
+                                <div>
+                                    <h3>MateBook 14 2022</h3>
+                                </div>
+                                <div class="pt-5">
+                                    <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card border-0 p-4 rounded-4 d-flex justify-content-between h-100">
+                                <div>
+                                    <img src="assests/images/all-matebook-d-16-2022.png" alt="">
+                                </div>
+                                <div>
+                                    <h3>MateBook D 14 2023</h3>
+                                </div>
+                                <div class="pt-5">
+                                    <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container py-80">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card rounded-4 border-0 h-75">
+                        <div class="p-5">
+                            <h3>Explore More Monitors</h3>
+                            <p class="fw-light fs-16">Seamless Collaboration, Keeps you Productive at all times.</p>
+                            <div class="pt-4">
+                                <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="assests/images/more-monitors1.png" alt="more-monitors" class="float-end h-50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="card rounded-4 border-0 explore_img">
+                        <div class="p-5">
+                            <h3>Explore All Accessories</h3>
+                            <p class="fw-light fs-16">abundant office accessories</p>
+                            <div class="pt-4">
+                                <a title="Learn More" href="#learnmore" class="fw-semibold fs-14">Learn More <svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-white py-80 rounded-4 position-relative">
+            <div class="row">
+                <h1 class="mb-3 text-center">Different Sizes to choose from.</h1>
+                <p class="fw-light text-center mb-5">HUAWEI PC family series.</p>
+                <!-- Slider main container -->
+                <div class="swiper-container pt-5 overflow-hidden">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assests/images/1.png" alt="" title="MateView GT"></div>
+                        <div class="swiper-slide"><img src="assests/images/2.png" alt="" title="MateView GT"></div>
+                        <div class="swiper-slide"><img src="assests/images/3.png" alt="" title="MateView SE"></div>
+                        <div class="swiper-slide"><img src="assests/images/4.png" alt="" title="MateBook 16s"></div>
+                        <div class="swiper-slide"><img src="assests/images/5.png" alt="" title="MateBook X Pro"></div>
+                        <div class="swiper-slide"><img src="assests/images/6.png" alt="" title="MateBook 14"></div>
+                        <div class="swiper-slide"><img src="assests/images/7.png" alt="" title="MateBook E"></div>
+                        <div class="swiper-slide"><img src="assests/images/8.png" alt="" title="MateView GT"></div>
+                        <div class="swiper-slide"><img src="assests/images/9.png" alt="" title="MateView GT"></div>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div>
+                    <div class="swiper-button-prev rounded-5"></div>
+                    <div class="swiper-button-next rounded-5"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-80">
+            <div class="row">
+                <h1 class="text-center mb-3">What Makes MateBook So Special?</h1>
+                <div class="col-md-6 mb-3">
+                    <div class="bg-black rounded-4 border-0">
+                        <div class="p-5">
+                            <h3 class="text-white">Why you need MateBook?</h3>
+                            <p class="fw-light text-white fs-16">Boost Productivity and unleash creativity.</p>
+                            <div class="pt-4">
+                                <a title="Learn More" href="#learnmore" class="fw-semibold text-white fs-14">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="assests/images/why-matebook-card-1.png" alt="why-matebook-card-1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-image rounded-4 border-0 h-100">
+                        <div class="p-5">
+                            <h3 class="text-black">All-new Windows 11 features</h3>
+                            <p class="fw-light text-black fs-16">Learn about Window 11.</p>
+                            <div class="pt-4">
+                                <a title="Learn More" href="#learnmore" class="fw-semibold text-black fs-14">Learn More
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-80">
+            <div class="row">
+                <h1 class="text-center mb-5">HUAWEI Smart Office</h1>
+                <div class="col-12">
+                    <div class="position-relative">
+                        <div class="bg-image_huawei rounded-4 border-0">
+                            <div class="card-content position-absolute">
+                                <h4 class="text-white fs-32">Super device, Super creativity.</h4>
+                                <div class="pt-0 pt-md-3">
+                                    <a title="Learn More" href="#learnmore" class="fw-semibold text-white fs-14">Learn
+                                        More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-80 position-relative">
+            <!-- Slider main container -->
+            <div class="swiper-container2 overflow-hidden ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="position-relative">
+                            <img src="assests/images/mobileservices-appgallery.jpg" alt="matebook-e-go-card-3"
+                                class="rounded-4">
+                            <div class="series-banner-text position-absolute p-2">
+                                <div class="d-flex gap-2 align-items-center mb-3">
+                                    <div><img src="assests/images/appgallery.svg" alt=""></div>
+                                    <div>
+                                        <h5>AppGallery</h5>
+                                    </div>
+                                </div>
+                                <p class="fs-16">Get files on connected mobile phone and tablet in one place.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="position-relative mb-3">
+                            <img src="assests/images/mobileservices-themes.jpg" alt="matebook-e-go-card-3"
+                                class="rounded-4">
+                            <div class="series-banner-text position-absolute p-2">
+                                <div class="d-flex gap-2 align-items-center mb-3">
+                                    <div><img src="assests/images/themes.svg" alt="themes"></div>
+                                    <div>
+                                        <h5>AI Search</h5>
+                                    </div>
+                                </div>
+                                <p class="fs-16">Get files on connected mobile phone and tablet in one place.</p>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img src="assests/images/mobileservices-music.jpg" class="rounded-4"
+                                alt="matebook-e-go-card-4">
+                            <div class="series-banner-text position-absolute p-2">
+                                <div class="d-flex gap-2 align-items-center text-white mb-3">
+                                    <div><img src="assests/images/music.svg" alt="music"></div>
+                                    <div>
+                                        <h5>HUAWEI Music</h5>
+                                    </div>
+                                </div>
+                                <p class="fs-16 text-white">Your moment, your music</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="position-relative">
+                            <img src="assests/images/mobileservices-video.jpg" alt="matebook-e-go-card-2"
+                                class="rounded-4">
+                            <div class="series-banner-text position-absolute p-2">
+                                <div class="d-flex gap-2 align-items-center text-white mb-3">
+                                    <div><img src="assests/images/video.svg" alt="music"></div>
+                                    <div>
+                                        <h5>HUAWEI video</h5>
+                                    </div>
+                                </div>
+                                <p class="fs-16 text-white">Experience your vision</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="position-relative mb-3">
+                            <img src="assests/images/mobileservices-browser.jpg" alt="matebook-e-go-card-3"
+                                class="rounded-4">
+                            <div class="series-banner-text position-absolute p-2">
+                                <div class="d-flex gap-2 align-items-center mb-3">
+                                    <div><img src="assests/images/browser.svg" alt="browser"></div>
+                                    <div>
+                                        <h5>HUAWEI Assistant TODAY</h5>
+                                    </div>
+                                </div>
+                                <p class="fs-16">Smart Assistant by Your Side.</p>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img src="assests/images/mobileservices-mobile-cloud.jpg" class="rounded-4"
+                                alt="matebook-e-go-card-4">
+                            <div class="series-banner-text position-absolute p-2">
+                                <div class="d-flex gap-2 align-items-center mb-3">
+                                    <div><img src="assests/images/cloud.svg" alt="cloud"></div>
+                                    <div>
+                                        <h5>HUAWEI Mobile Cloud</h5>
+                                    </div>
+                                </div>
+                                <p class="fs-16">Here and anywhere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div>
+                <div class="swiper-button-prev rounded-5"></div>
+                <div class="swiper-button-next rounded-5"></div>
+            </div>
+        </div>
+        </div>
     </section>
-  </section>
-  <!-- Trello101-Container Thumbnails End-->
 
-  <!-- swiper slider-container -->
-    <div class="container-fluid py-120 ps-5">
-      <div class="row">
-        <div class="col-12 col-md-7 col-lg-8 p-3">
-          <div>
-            <p class="text-uppercase mb-1 fs-16 fw-medium">Trello in action</p>
-            <h2 class="pb-3">Workflows for any project, big or small</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-      <div class="swiper px-2 position-relative">
-        <div class="swiper-wrapper mt-5 mb-5">
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper h-100">
-              <div class="bg-danger p-4 rounded-bottom-0 rounded-2"></div>
-              <div class="content card_box_shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-1.png" alt="">
-                </div>
-                <h3>Project management</h3>
-                <p class="fs-16">Keep tasks in order, deadlines on track, and team members
-                  aligned with Trello.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper h-100">
-              <div class="bg-primary p-4 rounded-bottom-0 rounded-2"></div>
-              <div class="content card_box_shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-2.png" alt="">
-                </div>
-                <h3>Meetings</h3>
-                <p class="fs-16">Empower your team meetings to be more productive,
-                  empowering,
-                  and dare we say—fun.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper h-100">
-              <div class="bg-success p-4 rounded-bottom-0 rounded-2"></div>
-              <div class="content card_box_shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-3.png" alt="">
-                </div>
-                <h3>Onboarding</h3>
-                <p class="fs-16">Onboarding to a new company or project is a snap with
-                  Trello’s
-                  visual layout of to-do’s, resources,</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper h-100">
-              <div class="bg-warning p-4 rounded-bottom-0 rounded-2"></div>
-              <div class="content card_box_shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-4.png" alt="">
-                </div>
-                <h3>Task management</h3>
-                <p class="fs-16">Use Trello to track, manage, complete, and bring tasks
-                  together like the pieces of a puzzle, and make your team’s projects.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper h-100">
-              <div class="bg-info p-4 rounded-bottom-0 rounded-2"></div>
-              <div class="content card_box_shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-5.svg" alt=""  class="swiper_img">
-                </div>
-                <h3>Brainstormig</h3>
-                <p class="fs-16">Unleash your team’s creativity and keep ideas visible,
-                  collaborative, and actionable.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide h-auto">
-            <div class="content-wrapper h-100">
-              <div class="bg-pink p-4 rounded-bottom-0 rounded-2"></div>
-              <div class="content card_box_shadow rounded-3 user-select-none">
-                <div class="swiper-avatar rounded-3 bg-white border-white position-absolute"><img
-                    src="assests/images/icon-6.png" alt="">
-                </div>
-                <h3>Resource hub</h3>
-                <p class="fs-16">Save time with a well-designed hub that helps teams find
-                  information easily and quickly.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-nav-wrapper top-0 position-absolute">
-          <div class="swiper-button-prev"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="15"></rect><path d="M16.7167 8.21674L10.2168 14.7167L16.5001 20.9999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-          <div class="swiper-button-next"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="30" y="30" width="30" height="30" rx="15" transform="rotate(-180 30 30)"></rect><path d="M13.2833 21.7833L19.7832 15.2833L13.4999 9.00007" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-        </div>
-      </div>
-    </div>
-</div>
-<div class="container py-5">
-  <div class="row align-items-center">
-    <div class="col-12 col-lg-9">
-      <p class="mb-5 p-1 fs-20">No need to start from scratch. Jump-start your workflow with a proven playbook
-        designed for different teams. Customize it to make it yours.</p>
-    </div>
-    <div class="col-lg-3 heading_button">
-      <a href=""class="text-decoration-none mb-5 rounded-2">Explore all Use Cases</a>
-    </div>
-  </div>
-</div>
-  <!-- swiper slider-container End-->
-
-<!-- Blog_Container start -->
-<section class="Blog-section mb-5">
-  <div class="container py-120">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-11 col-lg-8">
-        <h2 class="text-center text-white mb-3">See work in a whole new way</h2>
-        <p class="text-center text-white mb-3 fs-20">View your team’s projects from every angle and bring a fresh perspective to the task at hand.</p>
-        <div class="d-flex justify-content-center">
-          <div class="Blog_button mb-5">
-            <a href="#"class="d-inline-flex rounded-2 text-decoration-none">Discover all Trello views</a>
-          </div>
-        </div>
-      </div>
-      <div class="card_box_shadow rounded-3 p-4 mb-5 bg-white py-20">
-        <div class="row">
-          <div class="col-12 col-lg-7 mb-sm-0">
-            <div>
-              <img src="assests/images/blogImg_1.webp" alt="">
-            </div>
-          </div>
-          <div class="col-12 px-4 col-lg-5 px-4 pt-4">
-              <div class="d-flex align-items-center gap-2 mb-4">
-                <div class="blog_icon_a border-0"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 32 32" width="30px"> <path  d="M6 5.333h9.333a3.333 3.333 0 0 1 0 6.667H6a3.333 3.333 0 0 1 0-6.667Zm9.333 4a.667.667 0 0 0 0-1.333H6a.667.667 0 0 0 0 1.333h9.333Zm-6.666 4H18A3.333 3.333 0 1 1 18 20H8.667a3.333 3.333 0 0 1 0-6.667Zm9.333 4A.667.667 0 0 0 18 16H8.667a.667.667 0 0 0 0 1.333H18Zm6.667 4h-9.334a3.333 3.333 0 1 0 0 6.667h9.334a3.333 3.333 0 0 0 0-6.667Zm-9.334 4a.667.667 0 0 1 0-1.333h9.334a.667.667 0 1 1 0 1.333h-9.334Zm8-20H26A3.333 3.333 0 1 1 26 12h-2.667a3.333 3.333 0 1 1 0-6.667Zm2.667 4A.667.667 0 1 0 26 8h-2.667a.667.667 0 1 0 0 1.333H26Z"></path></svg> </div>
-                <h3 class="text-uppercase m-0 fs-16">Hit Deadlines Everytime</h3>
-              </div>
-            <div>
-            <p class="fs-20 mb-4">From weekly sprints to annual planning, Timeline view keeps all tasks on track. Quickly get a glimpse of what’s coming down the pipeline and identify any gaps that might impede your team’s progress.</p>
-            <a href="" class="mb-2 fs-20">Learn more about Timeline view</a>
-          </div>
-          </div>
-        </div>
-      </div>
-      <div class="card_box_shadow rounded-3 Blog-card p-4 bg-white py-20">
-        <div class="row">
-          <div class="col-12 col-lg-5 px-4 pt-4 mb-4">
-              <div class="d-flex align-items-center gap-2 mb-4">
-                <button class="blog_icon_b border-0 bg-white"><svg fill="currentColor" aria-hidden="true" viewBox="0 0 32 32" width="30px"> <path  d="M6 5.333h9.333a3.333 3.333 0 0 1 0 6.667H6a3.333 3.333 0 0 1 0-6.667Zm9.333 4a.667.667 0 0 0 0-1.333H6a.667.667 0 0 0 0 1.333h9.333Zm-6.666 4H18A3.333 3.333 0 1 1 18 20H8.667a3.333 3.333 0 0 1 0-6.667Zm9.333 4A.667.667 0 0 0 18 16H8.667a.667.667 0 0 0 0 1.333H18Zm6.667 4h-9.334a3.333 3.333 0 1 0 0 6.667h9.334a3.333 3.333 0 0 0 0-6.667Zm-9.334 4a.667.667 0 0 1 0-1.333h9.334a.667.667 0 1 1 0 1.333h-9.334Zm8-20H26A3.333 3.333 0 1 1 26 12h-2.667a3.333 3.333 0 1 1 0-6.667Zm2.667 4A.667.667 0 1 0 26 8h-2.667a.667.667 0 1 0 0 1.333H26Z"></path></svg> </button>
-                <h3 class="text-uppercase m-0 fs-16">Stay on top of tasks</h3>
-              </div>
-            <p class="fs-20 mb-4">Start each day without any surprises. Whether scheduling an editorial calendar or staying on top of to-dos, Calendar view is like a crystal ball giving you a clear vision of what work lies ahead.</p>
-            <a href="" class="mb-2 fs-20">Learn more about Calendar View</a>
-          </div>
-          <div class="col-12 col-lg-7 mb-sm-0">
-            <div>
-              <img src="assests/images/blogImg_2.webp" alt="" height="225px" class="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Blog-Card-container End-->
-
-<!-- Cards -->
-<div class="container py-120">
-  <div class="row">
-    <div class="col-12 col-md-7 col-lg-8 p-3 pt-5" >
-      <div>
-    <p class="fs-16 mb-1 fw-medium">POWERFUL WAYS TO GROW</p>
-    <h2 class="pb-3">Do more with Trello</h2>
-  </div>
-<div>
-  <p class="fs-20">Trello’s intuitive features give any team the ability to quickly set up and customize
-    workflows for just about anything.</p>
-</div>
-  </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-6 col-lg-4 p-3">
-            <div class="Trello-card p-4 h-100 rounded-2">
-              <div class="d-flex flex-column gap-3 justify-content-between h-100">
-                <div>
-                <img src="assests/images/Integrations_Puzzle.svg" alt="integrations puzzle img" class="mb-4">
-                  <h3>Integrations</h3>
-                  <p class="fs-16">Connect the apps your team already uses into your Trello workflow or add a Power-Up to fine-tune your specific needs.</p>
-                </div>
-                <a href="/integrations" class="me-auto rounded-2 text-decoration-none pt-3">Browse Integrations</a>
-            </div>
-          </div>
-          </div>
-       
-        <div class="col-12 col-md-6 col-lg-4 p-3">
-          <div class="Trello-card p-4 h-100 rounded-2">
-            <div class="d-flex flex-column gap-3 justify-content-between h-100">
-              <div>
-                <img src="assests/images/Gears.svg" alt="gears img" class="mb-4">
-                <h3>Butler Automation</h3>
-                <p class="fs-16">No-code automation is built into every Trello board. Focus on the work that matters most and let the robots do the rest.</p>
-              </div>
-              <a href="/butler-automation" class="me-auto rounded-2 text-decoration-none pt-3">Get to know Automation</a>
-          </div>
-        </div>
-        </div>
-      <div class="col-12 col-md-6 col-lg-4 p-3">
-        <div class="Trello-card p-4 h-100 rounded-2">
-          <div class="d-flex flex-column gap-3 justify-content-between h-100">
-            <div>
-              <img src="assests/images/Search_Value.svg" alt="search value img" class="mb-4">
-              <h3>Trello Enterprise</h3>
-              <p class="fs-16">The productivity tool teams love, paired with the features and security needed for scale.</p>
-            </div>
-            <a href="/enterprise" class="me-auto rounded-2 text-decoration-none pt-3">Explore Enterprise</a>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Cards End -->
-
-<!-- surveyCard-container -->
-<section class="survey_card-section">
-  <div class="container position-relative card-section pt-5 p-3 overflow-hidden">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="row surveyCard rounded-3">
-          <div class="col-lg-8">
-            <div class="d-flex flex-column h-100 surveyCard_padding">
-                <div>
-                <p class="fs-24">[Trello is] great for simplifying complex processes. As a manager, I can chunk [processes] down into bite-sized pieces for my team and then delegate that out, but still keep a bird's-eye view.</p>
-              </div>
-            <div class="mt-auto pt-3 border-center">
-              <p class="fs-16">Joey Rosenberg</p>
-              <p class="fs-16">Global Leadership Director at Women Who Code</p>
-              <div class="survey d-lg-flex justify-content-between align-items-baseline mt-4">
-                <img src="assests/images/WomenWhoCode_logo.svg" alt="Women Who Code company logo">
-                <a href="#women-who-code">Read the story</a>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div class="col-lg-4 px-0">
-            <div class="swiper-text text-white d-flex flex-column rounded-2 rounded-start-0 surveyCard_padding h-100">
-              <h3>75% of organizations report that Trello delivers value to their business within 30 days.</h3>
-              <div class="mt-auto pt-3">
-                <a href="techvalidate">Trello TechValidate Survey</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="row surveyCard rounded-3">
-          <div class="col-lg-8">
-            <div class="d-flex flex-column h-100 surveyCard_padding">
-                <div>
-                <p class="fs-24">Whether someone is in the office, working from home, or working on-site with a client, everyone can share context and information through Trello.</p>
-              </div>
-            <div class="mt-auto pt-3 border-center">
-              <p class="fs-16">Sumeet Moghe</p>
-              <p class="fs-16">Product Manager at ThoughtWorks</p>
-              <div class="survey d-lg-flex justify-content-between align-items-baseline mt-4">
-                <img src="assests/images/thoughtworks.svg" alt="throughout company logo">
-                <a href="#throughout-who-code">Read the story</a>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div class="col-lg-4 px-0">
-            <div class="swiper-text text-white d-flex flex-column rounded-2 rounded-start-0 surveyCard_padding h-100">
-              <h3>75% of organizations report that Trello delivers value to their business within 30 days.</h3>
-              <div class="mt-auto pt-3">
-                <a href="techvalidate">Trello TechValidate Survey</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="swiper-slide">
-        <div class="row surveyCard rounded-3">
-          <div class="col-lg-8">
-            <div class="d-flex flex-column h-100 surveyCard_padding">
-                <div>
-                <p class="fs-24">We used Trello to provide clarity on steps, requirements, and procedures. This was exceptional when communicating with teams that had deep cultural and language differences.</p>
-              </div>
-            <div class="mt-auto pt-3 border-center">
-              <p class="fs-16">Jefferson Scomacao</p>
-              <p class="fs-16">Development Manager at IKEA/PTC</p>
-              <div class="survey d-lg-flex justify-content-between align-items-baseline mt-4">
-                <img src="assests/images/ptc-logo.svg" alt="ptcl company logo">
-                <a href="#ptcl-who-code">Read the story</a>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div class="col-lg-4 px-0">
-            <div class="swiper-text text-white d-flex flex-column rounded-2 rounded-start-0 surveyCard_padding h-100">
-              <h3>75% of organizations report that Trello delivers value to their business within 30 days.</h3>
-              <div class="mt-auto pt-3">
-                <a href="techvalidate">Trello TechValidate Survey</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="swiper-pagination position-absolute"></div>
-    <div class="swiper-nav top-0 gap-3 position-absolute">
-      <div class="swiper-button-prev"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="15"></rect><path d="M16.7167 8.21674L10.2168 14.7167L16.5001 20.9999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-          <div class="swiper-button-next"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="30" y="30" width="30" height="30" rx="15" transform="rotate(-180 30 30)"></rect><path d="M13.2833 21.7833L19.7832 15.2833L13.4999 9.00007" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
-    </div>
-  </div>
-</section>
-<!-- surveyCard-container End-->
-
-    <!-- Trello heading and Button-Container -->
-  <section class="trello_heading_section">
-    <div class="container pt-5 pb-0">
-      <div class="row">
-        <div class="col-12">
-      <h2 class="text-center mb-3">Trello priced your way</h2>
-      <p class="text-center fs-20 mb-3">Trusted by millions, Trello powers teams all around the
-        world.
-      </p>
-      <div class="d-flex justify-content-center">
-        <button class="btn btn-primary rounded-2">Compare plans</button>
-      </div>
-    </div>
-  </div>
-  </div>
-    <!-- Trello heading and Button-Container End-->
-
-    <!--Pricing Cards-section -->
-    <div class="container py-120">
-      <div class="row">
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card bg-white d-flex gap-4 flex-column justify-content-between h-100">
-            <div>
-              <h4>FREE</h4>
-              <div>
-                <div class="mb-9">
-                  <span>$</span>
-                  <span class="fs-48">0</span>
-                  <span>USD</span>
-                </div>
-                <p class="fs-12 mb-5">Free for your whole team</p>
-              </div>
-              <p class="fs-16">For individuals or teams looking to organize any
-                project.</p>
-            </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href class="text-decoration-none rounded-2"><span>Get started</span></a>
-              </div>
-              <div>
-                <a href="#range">Learn more about Free</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card d-flex gap-4 flex-column justify-content-between bg-white h-100">
-            <div>
-              <h4>STANDARD</h4>
-              <div>
-                <div class="mb-9">
-                  <span>$</span>
-                  <span class="fs-48">5</span>
-                  <span>USD</span>
-                </div>
-                <p class="mb-4 fs-12">Per user/month if billed annually ($6 billed monthly)</p>
-              </div>
-              <p class="fs-16">For small teams that need to manage work and scale
-                collaboration.
-              </p>
-            </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href class="text-decoration-none rounded-2"><span>Sign up now</span></a>
-              </div>
-              <div>
-                <a href="#range">Learn more about Standard</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card active d-flex gap-4 flex-column justify-content-between bg-white h-100">
-            <div>
-              <h4>PREMIUM</h4>
-              <div>
-                <div class="mb-9">
-                  <span>$</span>
-                  <span class="fs-48">10</span>
-                  <span>USD</span>
-                </div>
-                <p class="mb-4 fs-12">Per user/month if billed annually ($12.50 billed monthly)
-                </p>
-              </div>
-              <p class="fs-16">For teams that need to track and visualize multiple projects in
-                several ways, including boards, timelines, calendars, etc.</p>
-            </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href class="text-decoration-none rounded-2"><span>Try for free</span></a>
-              </div>
-              <div>
-                <a href="">Learn more about Premium</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 px-0 mb-3">
-          <div class="pricing-card d-flex gap-4 flex-column justify-content-between bg-white h-100" id="enterpriseCard">
-            <div>
-              <h4>ENTERPRISE</h4>
-              <div class="mb-9">
-                <span class="price-counter">$<span class="fs-48">17.50</span>USD</span>
-              </div>
-              <p class="mb-4 fs-12">Per user/month - billed annually ($210.00 annual price per
-                user)
-              </p>
-              <p class="mb-3 fs-16">For organizations that need to connect work across teams with more
-                security and controls.</p>
-              <p class="mb-3 fs-18"> Est. cost for<span class="user-counter fs-20 text-center fw-semibold">50</span>users</p>
-              <p>
-                <span class="range-container"><input type="range" id="priceRange" min="50" max="100" value="50"></span>
-              </p>
-              <p id="peakMessage">For organizations with more than 5,000 users, please contact sales for pricing </p>
-            </div>
-            <div>
-              <div class="Sign-up-button bg-white mb-4">
-                <a href="#sales" class="text-decoration-none rounded-2"><span>Contact Sales</span></a>
-              </div>
-              <div>
-                <a href="#range">Learn more about Enterprise</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--Pricing Cards-section End -->
-
-  <!-- Image-Container -->
-  <div class="container pt-0 py-120">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-        <div>
-          <p class="text-center fs-20 mb-4">Join over 2,000,000 teams worldwide that are using Trello to get more
-            done.</p>
-        </div>
-        <img src="assests/images/logos-horizontal-visa-coinbase-john-deere-zoom-grand-hyatt-fender.svg" alt="">
-      </div>
-    </div>
-  </div>
-  <!-- Image-Container End-->
-
-  <!-- Get started with Trello today-Container -->
-  <section class="gradient-section gradient-section-md">
     <div class="container py-80">
-      <div class="row">
-        <div>
-          <h2 class="text-white text-center mb-4">Get started with Trello today</h2>
-          <div class="d-flex flex-wrap mb-4 gap-3 justify-content-center ">
-            <form>
-              <div class="form-group mb-2">
-                <input type="email" name="email" placeholder="Email" class="form-control">
-              </div>
-            </form>
-            <button class="btn btn-primary rounded-2 mb-3 border-0">Sign up-it's
-              free!</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Get started with Trello today-Container End -->
-
- <!-- Footer-section -->
- <section class="footer-section pt-5">
-  <div class="container">
-    <div class="row gap-4">
-      <div class="col-12 col-sm-6 col-md-12 col-lg-2">
-          <div class="d-flex flex-wrap gap-3 justify-content-between border-line-bottom">
-            <svg aria-label="Atlassian Trello" fill="#ffffff" height="40" role="img" viewBox="0 0 312 105" width="130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient id="trello-logo-gradient-white" x1="49.992%" x2="49.992%" y1="100%" y2=".016%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".5"></stop><stop offset="15%" stop-color="#ffffff" stop-opacity=".65"></stop><stop offset="30%" stop-color="#ffffff" stop-opacity=".78"></stop><stop offset="46%" stop-color="#ffffff" stop-opacity=".88"></stop><stop offset="62%" stop-color="#ffffff" stop-opacity=".95"></stop><stop offset="80%" stop-color="#ffffff" stop-opacity=".99"></stop><stop offset="100%" stop-color="#ffffff"></stop></linearGradient></defs><path d="M42.6 5.2 42.6 17.3 28.3 17.3 28.3 63 14.5 63 14.5 17.2.2 17.2.2 5.2z" transform="translate(87 40)"></path><path d="M60.2,63 L47.5,63 L47.5,18 L60.2,18 L60.2,26.6 C62.6,20.5 66.5,16.9 73.4,17.4 L73.4,30.7 C64.4,30 60.2,32.2 60.2,39.4 L60.2,63 Z" transform="translate(87 40)"></path><path d="M143,63.4 C134.6,63.4 129.4,59.4 129.4,49.9 L129.4,0.6 L142.2,0.6 L142.2,48.1 C142.2,50.8 144,51.8 146.2,51.8 C146.8,51.8 147.5,51.8 148.1,51.7 L148.1,62.8 C146.4,63.2 144.7,63.4 143,63.4 L143,63.4 Z" transform="translate(87 40)"></path><path d="M169.8,63.4 C161.4,63.4 156.2,59.4 156.2,49.9 L156.2,0.6 L169,0.6 L169,48.1 C169,50.8 170.8,51.8 173,51.8 C173.6,51.8 174.3,51.8 174.9,51.7 L174.9,62.8 C173.2,63.2 171.5,63.4 169.8,63.4 L169.8,63.4 Z" transform="translate(87 40)"></path><path d="M181,40.5 C181,26.6 189,17.1 202.8,17.1 C216.6,17.1 224.4,26.6 224.4,40.5 C224.4,54.4 216.5,64.1 202.8,64.1 C189.1,64.1 181,54.3 181,40.5 Z M193.5,40.5 C193.5,47.3 196.3,52.6 202.8,52.6 C209.3,52.6 211.9,47.2 211.9,40.5 C211.9,33.8 209.1,28.5 202.8,28.5 C196.5,28.5 193.5,33.7 193.5,40.5 Z" transform="translate(87 40)"></path><path d="M90.6,44.6 C94.2,45 97.8,45.2 101.3,45.2 C111.1,45.2 119.3,42.6 119.3,33.1 C119.3,23.9 110.8,17 100.6,17 C86.9,17 78.1,27 78.1,40.8 C78.1,55.2 85.7,63.8 102.8,63.8 C107.9,63.9 112.9,63 117.7,61.2 L117.7,50.4 C113.3,51.8 108.3,53.2 103.3,53.2 C96.5,53.3 91.8,51 90.6,44.6 L90.6,44.6 Z M100.4,26.9 C104,26.9 106.9,29.3 106.9,32.7 C106.9,37 102.3,38.4 97.1,38.4 C94.9,38.4 92.6,38.2 90.4,37.9 C90.6,35.8 91.2,33.8 92.2,31.9 C93.8,28.8 97,26.9 100.4,26.9 Z" transform="translate(87 40)"></path><path fill="url(#trello-logo-gradient-white)" d="M55.3,40.6 L7.8,40.6 C3.7,40.6 0.4,43.9 0.4,48 L0.4,95.6 C0.4,99.7 3.7,103 7.8,103 L55.3,103 C59.4,103 62.7,99.7 62.7,95.6 L62.7,48 C62.7,43.9 59.4,40.6 55.3,40.6 Z M27.2,85.5 C27.2,86.9 26.1,88 24.7,88 L14.3,88 C12.9,88 11.8,86.9 11.8,85.5 L11.8,54.6 C11.8,53.2 12.9,52.1 14.3,52.1 L24.7,52.1 C26.1,52.1 27.2,53.2 27.2,54.6 L27.2,85.5 Z M51.2,71.3 C51.2,72.7 50.1,73.8 48.8,73.8 L38.3,73.8 C36.9,73.8 35.8,72.7 35.8,71.3 L35.8,54.6 C35.8,53.2 36.9,52.1 38.3,52.1 L48.7,52.1 C50.1,52.1 51.2,53.2 51.2,54.6 L51.2,71.3 Z"></path><g opacity=".7"><path d="M98.9,16.7 C98.9,12.7 96.3,10.9 91.5,9.7 C88.5,8.9 87.8,8.3 87.8,7.3 C87.8,6.1 88.9,5.5 90.9,5.5 C93.3,5.6 95.7,6.2 97.9,7.3 L97.9,2.3 C95.8,1.3 93.4,0.8 91.1,0.8 C85.8,0.8 82.9,3.3 82.9,7.4 C82.9,11.3 85.5,13.3 89.9,14.3 C93,15 93.9,15.5 93.9,16.8 C93.9,17.8 93.2,18.6 90.9,18.6 C88.1,18.5 85.3,17.7 82.8,16.3 L82.8,21.6 C85.3,22.8 88,23.5 90.8,23.5 C96.2,23.5 98.9,20.8 98.9,16.7 L98.9,16.7 Z" transform="translate(94)"></path><path d="M159.3 1.2 159.3 23.2 164 23.2 164 6.4 166 10.8 172.6 23.1 178.5 23.1 178.5 1.1 173.8 1.1 173.8 15.3 172 11.2 166.7 1.1 159.3 1.1z" transform="translate(94)"></path><path d="M129.6 1.2 124.5 1.2 124.5 23.2 129.6 23.2z" transform="translate(94)"></path><path d="M43.2 1.2 43.2 23.2 53.7 23.2 55.3 18.4 48.3 18.4 48.3 1.2z" transform="translate(94)"></path><path d="M22.4 1.2 22.4 6 28.1 6 28.1 23.2 33.2 23.2 33.2 6 39.3 6 39.3 1.2z" transform="translate(94)"></path><path d="M15,1.2 L8.3,1.2 L0.6,23.2 L6.5,23.2 L7.6,19.5 C8.9,19.9 10.3,20.1 11.7,20.1 C13.1,20.1 14.5,19.9 15.8,19.5 L16.9,23.2 L22.8,23.2 L15,1.2 Z M11.6,15.5 C10.6,15.5 9.7,15.4 8.8,15.1 L11.6,5.5 L14.4,15.1 C13.5,15.4 12.6,15.5 11.6,15.5 Z" transform="translate(94)"></path><path d="M71.7,1.2 L65,1.2 L57.3,23.2 L63.2,23.2 L64.3,19.5 C65.6,19.9 67,20.1 68.4,20.1 C69.8,20.1 71.2,19.9 72.5,19.5 L73.6,23.2 L79.5,23.2 L71.7,1.2 Z M68.4,15.5 C67.4,15.5 66.5,15.4 65.6,15.1 L68.4,5.5 L71.2,15.1 C70.3,15.4 69.3,15.5 68.4,15.5 Z" transform="translate(94)"></path><path d="M148,1.2 L141.3,1.2 L133.6,23.2 L139.5,23.2 L140.6,19.5 C141.9,19.9 143.3,20.1 144.7,20.1 C146.1,20.1 147.5,19.9 148.8,19.5 L149.9,23.2 L155.8,23.2 L148,1.2 Z M144.6,15.5 C143.6,15.5 142.7,15.4 141.8,15.1 L144.6,5.5 L147.4,15.1 C146.5,15.4 145.6,15.5 144.6,15.5 Z" transform="translate(94)"></path><path d="M119.2,16.7 C119.2,12.7 116.6,10.9 111.8,9.7 C108.8,8.9 108.1,8.3 108.1,7.3 C108.1,6.1 109.2,5.5 111.1,5.5 C113.5,5.6 115.9,6.2 118.1,7.3 L118.1,2.3 C115.9,1.3 113.6,0.8 111.2,0.8 C105.9,0.8 103,3.3 103,7.4 C103,11.3 105.6,13.3 110,14.3 C113.1,15 114,15.5 114,16.8 C114,17.8 113.3,18.6 111,18.6 C108.2,18.5 105.4,17.7 102.9,16.3 L102.9,21.6 C105.4,22.8 108.1,23.5 110.9,23.5 C116.6,23.5 119.2,20.8 119.2,16.7 L119.2,16.7 Z" transform="translate(94)"></path></g></svg>
-            <div class="d-inline-block ps-5 mb-5">
-              <a href="#login" class="text-white text-decoration-none">Log In</a>
+        <div class="row">
+            <h1 class="text-center mb-5">Huawei, your trusted partner.</h1>
+            <div class="col-12">
+                <div class="position-relative">
+                    <div class="bg-image_partner rounded-4 border-0">
+                        <div class="card-content position-absolute">
+                            <h4 class="text-white fs-32">Huawei, your trusted partner.</h4>
+                            <p class="text-color fs-16">Break barries in work, life and study.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-2 footer-text border-line-bottom">
-        <div class="footer-text p-3 mb-3">
-          <div>
-            <p class="text-white fs-16 mb-2">About Trello</p>
-          </div>
-          <div>
-            <p class="fs-12 text-white mb-3">What’s behind the boards  open roles on the Trello</p>
-          </div>
         </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-2 footer-text border-line-bottom">
-        <div class="footer-text p-3 mb-3">
-          <div>
-            <p class="text-white fs-16 mb-2">Jobs</p>
-          </div>
-          <div>
-          <p class="fs-12 text-white mb-3">Learn about open roles on the Trello team</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-2 footer-text border-line-bottom">
-        <div class="footer-text p-3 mb-3">
-          <div>
-            <p class="text-white fs-16 mb-2">Apps</p>
-          </div>
-          <div>
-            <p class="fs-12 text-white mb-3">Download the Trello App for your Desktop or Mobile devices</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-12 col-sm-6 col-md-2 footer-text border-line-bottom">
-        <div class="footer-text p-3 mb-3">
-          <div>
-            <p class="text-white fs-16 mb-2">Contact us</p>
-          </div>
-          <div>
-            <p class="fs-12 text-white mb-3">Need anything? Get in touch and we can help.</p>
-          </div>
-        </div>
-       
-      </div>
     </div>
-  </div>
-</section>
+    </section>
 
-<div class="border-line w-100 mx-auto"></div>
+    <footer class="bg-white">
+        <div class="container-fluid py-4 footer">
+            <div class="row gap-0 gap-lg-5">
 
-<section class="footer-section">
-  <div class="container pt-4">
-    <div class="row">
-      <div class="d-flex flex-wrap justify-content-between ">
-        <div class="col-12 col-md-4 col-lg-3">
-          <form class="mb-3 p-2">
-            <img src="assests/images/language-logo.svg" alt="">
-            <select class="bg-transparent text-white border-0" aria-label="Select a language"
-              data-testid="language-select">
-              <option value="en" data-uuid="en_language">English</option>
-              <option value="cs" data-uuid="cs_language">Čeština</option>
-              <option value="de" data-uuid="de_language">Deutsch</option>
-              <option value="es" data-uuid="es_language">Español</option>
-              <option value="fr" data-uuid="fr_language">Français</option>
-              <option value="it" data-uuid="it_language">Italiano</option>
-              <option value="hu" data-uuid="hu_language">Magyar</option>
-              <option value="nl" data-uuid="nl_language">Nederlands</option>
-              <option value="nb" data-uuid="nb_language">Norsk (bokmål)</option>
-              <option value="pl" data-uuid="pl_language">Polski</option>
-              <option value="pt-BR" data-uuid="pt-BR_language">Português (Brasil)</option>
-              <option value="fi" data-uuid="fi_language">Suomi</option>
-              <option value="sv" data-uuid="sv_language">Svenska</option>
-              <option value="vi" data-uuid="vi_language">Tiếng Việt</option>
-              <option value="tr" data-uuid="tr_language">Türkçe</option>
-              <option value="ru" data-uuid="ru_language">Русский</option>
-              <option value="uk" data-uuid="uk_language">Українська</option>
-              <option value="th" data-uuid="th_language">ภาษาไทย</option>
-              <option value="zh-Hans" data-uuid="zh-Hans_language">中文 (简体)</option>
-              <option value="zh-Hant" data-uuid="zh-Hant_language">中文 (繁體)</option>
-              <option value="ja" data-uuid="ja_language">日本語</option>
-            </select>
-          </form>
+                <div class="col-lg-2 col-md-3 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase fw-semibold mb-4">product</h5>
+                    <ul class="list-unstyled mb-0 ">
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Smartphone</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">PC</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Tablet</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Wearable</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Audio</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Vision</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Router</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Accessories</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">HarmonyOS 4</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">EMUI</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Celia</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Business</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase fw-semibold mb-4">Mobile Services</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Smartphone</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">PC</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Tablet</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Wearable</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Audio</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Vision</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Router</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Accessories</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">HarmonyOS 4</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">EMUI</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Celia</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Business</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase fw-semibold mb-4">Support</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Find Service Center</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Product Environmental</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Information</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Call Us</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">HiSuite</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Beta</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase fw-semibold mb-4">about HUAWEI</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">News</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Events</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Sustainability</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Privacy</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Corporate</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Enterprise</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Carrier</a></li>
+                        <li class="mb-2"><a href="#" class="fs-14 fw-light">Join Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-
-        <div class="col-12 col-lg-6">
-          <nav>
-            <ul class="d-flex flex-wrap justify-content-start gap-2 fs-12 list-unstyled p-2 mb-5">
-              <li> <a href class="text-white text-decoration-none">Privacy Policy</a></li>
-              <li><a href class="text-white text-decoration-none">Terms</a></li>
-              <li><a href class="text-white text-decoration-none">Copyright © 2024 Atlassian</a></li>
+        <hr class="line">
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+            <p class="fs-16 mb-3 ms-4">Connect With Us</p>
+            <ul class="d-flex flex-wrap footer_icon">
+                <li class="list-unstyled"><a href="#" target="_blank" title="facebook"><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z">
+                            </path>
+                        </svg></a></li>
+                <li class="list-unstyled"><a href="#" target="_blank" title="twitter"></i><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z">
+                            </path>
+                        </svg></a></li>
+                <li class="list-unstyled"><a href="#" target="_blank" title="instagram"></i><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                            </path>
+                        </svg></a></li>
+                <li class="list-unstyled"><a href="#" target="_blank" title="youtube"><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 72 72">
+                            <path
+                                d="M61.115,18.856C63.666,21.503,64,25.709,64,36s-0.334,14.497-2.885,17.144C58.563,55.791,55.906,56,36,56	s-22.563-0.209-25.115-2.856C8.334,50.497,8,46.291,8,36s0.334-14.497,2.885-17.144S16.094,16,36,16S58.563,16.209,61.115,18.856z M31.464,44.476l13.603-8.044l-13.603-7.918V44.476z">
+                            </path>
+                        </svg></i></a></li>
+                <li class="list-unstyled"><a href="#" target="_blank" title="linkedIn"><svg
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 30 30">
+                            <path
+                                d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z">
+                            </path>
+                        </svg></i></a></li>
             </ul>
-          </nav>
         </div>
 
-        <div class="col-12 col-lg-3">
-          <div class="footer-icon d-flex flex-wrap gap-4 mb-5">
-            <a href="#Instagram"
-              class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none"><svg height="14" viewBox="0 0 16 16" width="16"><path d="m7.9365485 4.00948853c2.1378796 0 3.8773322 1.74591892 3.8773322 3.89174604 0 2.14582713-1.7394526 3.89174603-3.8773322 3.89174603-2.13787961 0-3.87703593-1.7459189-3.87703593-3.89174603 0-2.14582712 1.73915632-3.89174604 3.87703593-3.89174604zm0 1.39893537c-1.36946341 0-2.48357803 1.11825631-2.48357803 2.49281067 0 1.37455435 1.11411462 2.49281063 2.48357803 2.49281063 1.36975965 0 2.483578-1.11825628 2.483578-2.49281063 0-1.37455436-1.11381835-2.49281067-2.483578-2.49281067zm4.1036506-2.58676679c.5095127 0 .9227511.41477468.9227511.92618144 0 .5117041-.4132384.92647878-.9227511.92647878-.5098089 0-.9230474-.41477468-.9230474-.92647878 0-.51140676.4132385-.92618144.9230474-.92618144zm-7.31121058-1.33500953c-1.79099628 0-3.24784704 1.46226656-3.24784704 3.25992082v6.3093323c0 1.7976543 1.45685076 3.2599209 3.24784704 3.2599209h6.28566818c1.7909963 0 3.2481433-1.4622666 3.2481433-3.2599209v-6.3093323c0-1.79765426-1.457147-3.25992082-3.2481433-3.25992082zm6.28566818 14.31582152h-6.28566818c-2.60740146 0-4.72898852-2.1291766-4.72898852-4.7465684v-6.3093323c0-2.61739173 2.12158706-4.7465684 4.72898852-4.7465684h6.28566818c2.6076977 0 4.7292848 2.12917667 4.7292848 4.7465684v6.3093323c0 2.6173918-2.1215871 4.7465684-4.7292848 4.7465684z"></path></svg></a>
+        <hr class="line">
+        <div class="bg-light py-2">
+            <div class="container text-center">
+                <a href="#" class="fw-light fs-13">&copy; Copyright © 1998-2023 Huawei Device Co., Ltd. All rights
+                    reserved.</a>
 
-            <a href="#Facebook"
-              class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none"><svg height="14" viewBox="0 0 8 16" width="8"><path d="m1.61157724 7.96343677v7.63998533c0 .1097869.08892957.199047.19830983.199047h2.82684468c.10938027 0 .19799997-.0892601.19799997-.199047v-7.76438973h2.04940817c.10287322 0 .1887042-.07930781.19738025-.18225245l.1970704-2.33942478c.00991549-.1160071-.08118309-.21584163-.19738026-.21584163h-2.24647856v-1.65986573c0-.38876376.31419714-.70412892.70183089-.70412892h1.57935189c.10969013 0 .19830983-.08926016.19830983-.19904704v-2.33942478c0-.11009789-.0886197-.19904704-.19830983-.19904704h-2.66850667c-1.56602795 0-2.83583059 1.27421209-2.83583059 2.8460617v2.25545181h-1.41326741c-.10938026 0-.19830983.08926015-.19830983.19904704v2.33942477c0 .10978689.08892957.19904705.19830983.19904705h1.41326741z"></path></svg></a>
-
-            <a href="#LinkedIn"
-              class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none"><svg height="14" viewBox="0 0 16 16" width="16"><g><path d="m3.36409209 14.2159091h-3.17642414v-9.59186348h3.17642414z"></path><path d="m1.77597952 3.31427557h-.0206972c-1.06590614 0-1.75528232-.7364835-1.75528232-1.65693805 0-.94122869.71047144-1.65733752 1.79707473-1.65733752 1.08660338 0 1.75528236.71610883 1.77597957 1.65733752 0 .92045455-.68937619 1.65693805-1.79707478 1.65693805z"></path><path d="m14.8176077 14.2159091h-3.1760261v-5.13141424c0-1.28959517-.4599158-2.16910068-1.6092078-2.16910068-.87744213 0-1.40004662.59326174-1.62970603 1.16594902-.08398287.20494499-.10448108.4913885-.10448108.7780318v5.3565341h-3.17622514s.04159346-8.69198329 0-9.59186348h3.17622514v1.35810992c.42210364-.65358665 1.17735263-1.58322973 2.86258281-1.58322973 2.0898209 0 3.6568382 1.37089396 3.6568382 4.31702764z"></path></g></svg></a>
-
-            <a href="#Twitter"
-              class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none"><svg height="12" viewBox="0 0 20 16" width="20"><path d="m19.0426025 1.89416831c-.6070809.27573601-1.2752956.44311943-1.9307418.55341384.3110854-.05242868.7695883-.61749334.9529894-.84623773.2797448-.34874781.512285-.74604069.6430647-1.17517915.0166377-.03339901.0294061-.07573031-.0042561-.10097375-.0417876-.0166995-.0688722-.00815557-.1021475.00854393-.7316699.39340928-1.4881028.67885432-2.293288.88080182-.0669375.01669951-.1164636 0-.1582512-.04194294-.0669375-.07573032-.1296189-.1468003-.2004257-.20583111-.3385569-.28894028-.7018769-.51574287-1.1112406-.68312628-.5374349-.22020046-1.1247829-.313407-1.7040054-.27534766-.5633588.03650589-1.1166575.1961221-1.616561.4582655-.5010643.26253176-.9479595.62797907-1.3039279 1.0691567-.36834997.45593533-.63996937.99459147-.77887445 1.56548154-.13426201.55108368-.12342819 1.09634195-.04140068 1.65325103.01238152.09242982.00425615.10485736-.07893213.09242982-3.15032069-.47069303-5.76165874-1.60198743-7.88121865-4.0265226-.09208749-.10524572-.14200046-.10524572-.21745029.00815558-.92745255 1.3953796-.47746201 3.63777365.68137003 4.73955264.15438196.1468003.31302007.29360061.48442661.42758501-.0626814.0128159-.83381738-.07106999-1.52099123-.42758501-.09170057-.05864245-.13813124-.02485508-.1462566.07961392-.00851229.15107227.00425614.289717.02476302.45321681.17798422 1.41479763 1.15418898 2.72318446 2.49100524 3.23349028.15863811.06718638.33391387.12582883.50532041.15534423-.3048947.06679802-.6183017.11495474-1.49158515.04621491-.10872514-.02097147-.15051274.03339901-.10872514.13825637.65622008 1.79539099 2.07274232 2.32977519 3.13368304 2.63424989.14200046.0248551.28438783.0248551.42677521.0582541-.00851229.0128159-.01702458.0128159-.02514994.0252434-.35209922.5386562-1.57206498.9394443-2.14045371 1.1386733-1.03308233.3623404-2.15825213.5254519-3.25053355.4174876-.17450193-.0256318-.21125954-.02369-.25885097 0-.04759143.0295154-.00580383.0714584.05029989.1172849.22170643.1468003.44689516.2769011.67672696.4027299.69375153.3689426 1.41690916.6629316 2.17295517.8722579 3.90481903 1.082361 8.30335081.2869985 11.23506041-2.63658 2.3025741-2.2963762 3.109307-5.46268009 3.109307-8.63286759 0-.12427538.1462566-.19301521.2329271-.25825979.5989556-.45166336 1.0752569-.99226131 1.5221521-1.59616202.1002128-.13553785.0941388-.25631799.0941388-.30563979 0-.00854393 0-.0166995 0-.0166995 0-.05087524.006074-.03534082-.0716974 0"></path></svg></a>
-
-            <a href="#Youtube"
-              class="d-flex align-items-center justify-content-center m-0 text-white text-decoration-none"><svg height="10" viewBox="0 0 20 14" width="20"><path d="m12.6695433 7.17708642-4.43152592 2.43950617c-.19286329.10469136-.36604664-.03555555-.36604664-.25520987v-5.00740741c0-.22281482.17869373-.36266667.37155701-.25244445l4.46183305 2.56790124c.1971928.11259259.163737.39901234-.0358175.50765432zm7.0103835-2.87683951c0-2.37511111-1.9180056-4.30024691-4.2839264-4.30024691h-11.11168033c-2.3659208 0-4.28432007 1.9251358-4.28432007 4.30024691v5.22666667c0 2.37511112 1.91839927 4.30024692 4.28432007 4.30024692h11.11168033c2.3659208 0 4.2839264-1.9251358 4.2839264-4.30024692z"></path></svg></a>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Footer-section End-->
 
-  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
-<script></script>
-<script src="script.js" defer></script>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
 
+    <script>
+        $(document).ready(function () {
+            // Swiper: Slider
+            new Swiper('.swiper-container', {
+                loop: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                slidesPerView: 3,
+                paginationClickable: true,
+                spaceBetween: 20,
+                breakpoints: {
+                    1920: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1028: {
+                        slidesPerView: 6,
+                        spaceBetween: 30
+                    },
+                    480: {
+                        slidesPerView: 4,
+                        spaceBetween: 10
+                    }
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            });
+        });
 
-<script>
-function changeSlide(index) {
-  $('.thumbnail').removeClass('active');
-  $('.thumbnail[data-index="' + index + '"]').addClass('active');
-  $('#slick-slider').slick('slickGoTo', index);
-}
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Swiper: Slider
+            new Swiper('.swiper-container2', {
+                loop: false,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                slidesPerView: 1,
+                paginationClickable: true,
+                spaceBetween: 20,
+                breakpoints: {
+                    1920: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1028: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    }
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                }
+            });
+        });
 
-$(document).ready(function () {
-  var slider = $('#slick-slider');
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Swiper: Slider
+            new Swiper('.swiper-container-matebook', {
+                loop: false,
+                slidesPerView: 1,
+                paginationClickable: true,
+                spaceBetween: 20,
+                breakpoints: {
+                    1920: {
+                        slidesPerView: 3,
+                        spaceBetween: 0
+                    },
+                    1028: {
+                        slidesPerView: 3,
+                        spaceBetween: 0
+                    },
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    }
+                }
+            });
+        });
 
-  slider.slick({
-    arrows: false,
-    fade: false,
-    vertical: false,
-  });
-
-  slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    changeSlide(nextSlide);
-  });
-});
-</script>
-
-<script>
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: false,
-  autoHeight: false,
-  centeredSlides: false,
-  slidesPerView: 3.5,
-
-  // Responsive breakpoints
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 40,
-
-    },
-    425: {
-      slidesPerView: 1.2,
-      spaceBetween: 40,
-    },
-    767: {
-      slidesPerView: 1.2,
-      spaceBetween: 40,
-    },
-    991: {
-      slidesPerView: 3.3,
-      spaceBetween: 15,
-    }
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
-});
-
-</script>
-
-<script>
-  var swiperr = new Swiper('.card-section', {
-    slidesPerView: 1,
-    spaceBetween: 60,
-
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: false,
-    },
-    navigation: {
-      prevEl: '.swiper-button-prev',
-      nextEl: '.swiper-button-next',
-    },
-  });
-</script>
-
-
-<script>
-const priceCounter = document.querySelector('.price-counter');
-const userCounter = document.querySelector('.user-counter');
-const priceRange = document.getElementById('priceRange');
-const peakMessage = document.getElementById('peakMessage');
-priceRange.addEventListener('input', updatePrice);
-
-
-function updatePrice() {
-  const rangeValue = priceRange.value;
-  const price = (17.5 - (rangeValue * 0.1)).toFixed(2);
-  priceCounter.textContent = `$ ${price} USD`;
-
-  const users = rangeValue <= 50 ? 50 - (rangeValue * 50 / 50) : 50 + ((rangeValue - 50) * 4950 / 50);
-  userCounter.textContent = `${users.toFixed(0)} `;
-
-  if (rangeValue == 100) {
-    peakMessage.style.display = 'block';
-  } else {
-    peakMessage.style.display = 'none';
-  }
-}
-
-function decreaseRange() {
-  priceRange.value = Math.max(Number(priceRange.value) - 10, 0);
-  updatePrice();
-}
-
-function increaseRange() {
-  priceRange.value = Math.min(Number(priceRange.value) + 10, 100);
-  updatePrice();
-}
-</script>
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Swiper: Slider
+            new Swiper('.swiper-container-laptops', {
+                loop: false,
+                slidesPerView: 1.3,
+                paginationClickable: true,
+                spaceBetween: 20,
+                breakpoints: {
+                    1920: {
+                        slidesPerView: 4,
+                        spaceBetween: 0
+                    },
+                    991: {
+                        slidesPerView: 4,
+                        spaceBetween: 10
+                    },
+                    575: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 10
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Swiper: Slider
+            new Swiper('.swiper-container-cards', {
+                loop: false,
+                slidesPerView: 1.3,
+                paginationClickable: true,
+                spaceBetween: 20,
+                breakpoints: {
+                    1920: {
+                        slidesPerView: 4,
+                        spaceBetween: 0
+                    },
+                    991: {
+                        slidesPerView: 4,
+                        spaceBetween: 10
+                    },
+                    575: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 10
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Swiper: Slider
+            new Swiper('.swiper-container-series', {
+                loop: false,
+                slidesPerView: 1.3,
+                paginationClickable: true,
+                spaceBetween: 20,
+                breakpoints: {
+                    1920: {
+                        slidesPerView: 4,
+                        spaceBetween: 0
+                    },
+                    991: {
+                        slidesPerView: 4,
+                        spaceBetween: 10
+                    },
+                    575: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 10
+                    }
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

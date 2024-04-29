@@ -14,41 +14,44 @@ body {
     padding-bottom: 80px;
 }
 
+a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+    text-decoration: none;
+}
+
+span:hover {
+    color: cornflowerblue;
+}
+
 img {
     max-width: 100%;
     width: auto;
     height: auto;
 }
-
-.dropdown .dropbtn {
-    border: none;
-    padding: 9px 24px;
-    background: none;
+.link,
+.navbar-nav a{
+    position: relative;
+}
+.link::after,
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #000;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+}
+.link:hover::after,
+.navbar-nav a:hover::after{
+    transform: scaleX(1);
 }
 
-.dropdown-content {
-    display: none;
-}
-
-.dropdown-content a {
-    padding: 12px 16px;
-    display: block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.navbar-nav :hover {
-    color: blue;
-}
-
-.nav-section {
-    left: -34px;
-    right: 0;
-    padding: 12px 32px;
-    z-index: 2;
-    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+.nav-section { 
+    z-index: 30;
 }
 
 .navbar-toggler:focus {
@@ -57,30 +60,35 @@ img {
 }
 
 .header_a {
+    font-weight: 400;
     color: rgb(23, 43, 77);
-    padding: 0.7rem 1.5rem;
 }
 
-.header_getTrello {
-    background-color: rgb(0, 101, 255);
-    color: rgb(255, 255, 255);
-    padding: 0.9rem 1.5rem;
-}
-
-.header_getTrello:hover {
-    background-color: rgb(7, 71, 166);
-    color: rgb(255, 255, 255);
+.header_section {
+    background-color: #f1f3f5;
 }
 
 .btn {
-    padding: 14px 24px;
+    padding: 13px 30px;
     border: none;
 }
 
+.learn_more_btn {
+    padding: 5px 16px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.pc_padding{
+    padding: 0 28px;
+}
 .btn:hover {
     color: 0;
     background-color: white;
     border-color: none;
+}
+
+.link::after {
+    transition: .3s cubic-bezier(.4,0,.6,1);
 }
 
 h1 {
@@ -91,38 +99,50 @@ h1 {
 }
 
 h2 {
-    font-size: 2.25rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.33333;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 40px;
 }
 
 h4 {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 600;
     line-height: 24px;
 }
 
+h5{
+    font-size: 1rem;
+    line-height: 24px;
+}
 p {
-    font-size: 1.188rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 0;
 }
 
-.fs-12 {
-    font-size: 12px;
+.text_crimson {
+    color: crimson;
+}
+
+.fs-14 {
+    font-size: 14px;
 }
 
 .fs-16 {
     font-size: 16px;
     margin-bottom: 0;
+}
+
+.fs-13 {
+    font-size: 13px;
 }
 
 .fs-18 {
@@ -131,387 +151,142 @@ p {
 
 .fs-20 {
     font-size: 20px;
-    line-height: 30px;
 }
 
-.fs-24 {
-    font-size: 24px;
-    line-height: 1.5;
+.fs-22 {
+    font-size: 22px;
 }
 
-.fs-48 {
-    font-size: 48px;
+.fs-28 {
+    font-size: 28px;
+}
+.fs-32 {
+    font-size: 32px;
+    line-height: 45px;
+}
+.header_section_Card {
+    background: whitesmoke;
 }
 
-/* hero section start */
-.hero-section {
-    background: url(/assests/images/white-wave-bg\ \(1\).svg) center bottom -0.5px / 100% 14% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
-    color: rgb(255, 255, 255);
-    background-blend-mode: normal, normal;
+.img-text {
+    float: inline-end;
+    color: white;
+    background-color: cornflowerblue;
+}
+.card-content{
+    top: 64px;
+    padding: 0 64px;
+    left: 30px;
+
+}
+.series-banner-text {
+    top: 8px;
+    left: 8px;
 }
 
-.form-control {
-    padding: 12px 24px;
+.arrow_down {
+    right: 10px;
+    bottom: 10px;
 }
 
-.form-control:focus {
-    box-shadow: none;
-    border-color: white;
+.arrow_down svg {
+    background-image: url('/assests/images/arrow_doen.svg');
+    padding: 20px;
+    background-color: black;
+    border-radius: 30px;
 }
 
-.video_button a {
-    color: rgba(255, 255, 255, 0.8);
+.bg-image {
+    background-image: url('/assests/images/why-matebook-card-2.jpg');
+    background-position: center;
+    background-size: cover;
 }
-.video_button a, .video_button > span {
-    transition: all 250ms ease-out 10s;
+.logo{
+    max-width: 40%;
 }
-.video_button a:hover {
-    color: rgb(255, 255, 255);
-}
-.video_button a:hover svg{
-    transform: translate3d(3px, 0px, 0px);
-}
-
-.btn-primary:hover {
-    background-color: rgb(7, 71, 166);
+.bg-image_huawei {
+    background-image: url('/assests/images/smart-office.jpg');
+    background-size: cover;
+    padding: 215px;
 }
 
-/* hero section end */
-
-/* Thumbnails-Container */
-.Thumbnail-section {
-    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(178, 212, 255);
-    background-blend-mode: normal;
-    color: rgb(9, 30, 66);
+.bg-image_partner {
+    background-image: url('/assests/images/trusted-partner.jpg');
+    background-size: cover;
+    padding: 215px;
 }
-
-.thumbnail-container {
-    flex: 1;
+.text-color{
+    color: rgba(255, 255, 255, 0.99);
 }
-
-.main-slide {
-    flex: 2.3;
-}
-
-.thumbnail {
+.container-grid {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     cursor: pointer;
-    border: 8px solid transparent;
 }
-
-.thumbnail.active {
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
-    border-left: 8px solid rgb(0, 199, 229);
+.explore_img{
+    background-image: url('/assests/images/accessories.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 75%;
 }
-
-/* Thumbnails-Container End*/
-.heading_button a {
-    color: rgb(9, 30, 66);
-    border: 1px solid rgb(0, 101, 255);
-    padding: 0.7rem 1rem 0.8rem;
-}
-
-.heading_button a:hover {
-    background-color: rgb(222, 235, 255);
-    border-color: rgb(0, 101, 255);
-}
-
-/* swiper slider */
-.swiper .content-wrapper .content {
-    cursor: pointer;
-    height: 63%;
-    padding: 2.25rem 1.5rem 1.5rem;
-}
-.swiper_img{
-    max-width: 115%;
-    height: 30px;
-
-}
-.swiper-avatar {
-    border-style: solid;
-    border-width: 8px;
-    max-width: 12%;
-    top: 28px;
-}
-
-.bg-pink {
-    background: rgb(249, 156, 219);
-}
-
-.swiper-nav-wrapper {
-    right: 130px;
+.swiper-button-prev {
+    padding: 24px;
+    color: white;
+    background: hsl(0, 0%, 50%);
+    right: -20px;
     z-index: 1;
 }
 
-.swiper-nav-wrapper svg path {
-    stroke: rgb(122, 134, 154);
-}
-
-.swiper-nav-wrapper:hover svg path {
-    stroke: rgb(0, 184, 217);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    &:after {
-        display: none;
-    }
+.swiper-button-next {
+    padding: 24px;
+    color: white;
+    background: hsl(0, 0%, 50%);
+    right: -20px;
+    z-index: 1;
 }
 
 .swiper-button-prev,
-.swiper-button-next {
-    color: grey;
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    background-color: rgb(244, 245, 247);
-    border-radius: 50%;
+.swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, -20px);
+    right: auto;
 }
 
-/* swiper slider End*/
-
-/* Blog-Card */
-.Blog-section {
-    background: url(/assests/images/left-gradient.svg) left center / contain no-repeat scroll padding-box border-box,
-        url(/assests/images/right-gradient.svg) right center / contain no-repeat scroll padding-box border-box,
-        linear-gradient(240deg, rgb(0, 184, 217), rgb(0, 101, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(0, 101, 255);
-    background-blend-mode: normal, normal, normal;
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.card_box_shadow {
-    box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    opacity: 1;
+    cursor: auto;
+    pointer-events: none;
 }
-
-.blog_icon_a {
-    color: rgb(135, 119, 217);
+.footer a{
+    line-height: 24px;
+    color: #767676;
 }
-
-.blog_icon_b {
-    color: rgb(0, 199, 229);
+.line{
+    background-color:#ccc !important;
+    margin: 2rem;
 }
-
-.Blog_button a {
-    border: 1px solid rgb(0, 101, 255);
-    background-color: rgb(255, 255, 255);
-    padding: 0.7rem 1rem 0.8rem;
-    color: rgb(23, 43, 77);
+.footer_icon li{
+    margin-right: 20px;
+    font-size: 24px;
+    opacity: .3;
 }
-
-.Blog_button a:hover {
-    background-color: rgb(222, 235, 255);
-    border-color: rgb(0, 101, 255);
-    color: rgb(23, 43, 77);
+.footer_icon li:hover{
+    color: #000;
+    opacity: 1;
 }
-
-.Blog-card {
-    margin-bottom: -13rem;
-}
-
-/* Blog-Card  End */
-
-/* Cards */
-.Trello-card {
-    background-color: rgb(250, 251, 252);
-}
-
-.Trello-card a {
-    border: 1px solid rgb(0, 101, 255);
-    background-color: rgb(255, 255, 255);
-    padding: 0.7rem 1rem 0.8rem;
-    color: rgb(23, 43, 77);
-}
-
-.Trello-card a:hover {
-    background-color: rgb(222, 235, 255);
-    border-color: rgb(0, 101, 255);
-    color: rgb(23, 43, 77);
-}
-
-/* Cards End */
-
-/* surveyCard-Container */
-.surveyCard {
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
-    background-image: url(/assests/images/gvcsd.svg);
-    background-repeat: no-repeat;
-}
-
-.swiper-text {
-    padding: 2.5rem 2rem;
-    background: linear-gradient(60deg, rgb(101, 84, 192), rgb(249, 156, 219)) 0% 0% / auto repeat scroll padding-box border-box rgb(101, 84, 192);
-    box-shadow: rgba(9, 30, 66, 0.2) 0px 3px 5px, rgba(9, 30, 66, 0.31) 0px 0px 1px;
-}
-
-.border-center::before {
-    background-color: currentcolor;
-    content: "";
-    display: block;
-    height: 1px;
-    margin-bottom: 1rem;
-    max-width: 9rem;
-}
-
-.survey img {
-    max-height: 2.25rem;
-    max-width: 100%;
-    width: auto;
-}
-
-.surveyCard_padding {
-    padding: 2.5rem 2rem;
-}
-
-.swiper-text h3 {
-    font-size: 2.25rem;
-    line-height: 1.33333;
-}
-
-.swiper-text a {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.swiper-text a:hover {
-    color: rgb(255, 255, 255);
-}
-
-.swiper-pagination {
-    top: 13px;
-    z-index: 1;
-    text-align: end;
-}
-
-.swiper-pagination-bullet-active {
-    width: 3.75rem;
-    opacity: 0.4;
-    background: currentColor;
-    cursor: pointer;
-    height: 8px;
-    border-radius: 2rem;
-    transition: all 0.3s ease 0s;
-}
-
-.swiper-nav {
-    right: 10px;
-    z-index: 1;
-}
-
-.swiper-nav svg path {
-    stroke: rgb(122, 134, 154);
-}
-
-.swiper-nav:hover svg path {
-    stroke: rgb(0, 184, 217);
-}
-
-/* surveyCard-Container End*/
-
-/* pricing cards-Container */
-.pricing-card {
-    border: 1px solid rgb(223, 225, 230);
-    padding: 1.5rem 1rem 2rem 1rem;
-}
-
-.pricing-card.active {
-    border: 2px solid rgb(0, 184, 217);
-}
-
-.pricing-card.active .Sign-up-button a {
-    background-color: rgb(230, 252, 255);
-}
-
-.pricing-card.active .Sign-up-button a:hover {
-    background-color: white;
-}
-
-.user-counter {
-    appearance: textfield;
-    border-style: solid;
-    border-width: 0px 0px 1px;
-    color: rgb(9, 30, 66);
-    margin: 0px 0.25rem;
-    width: 4.5rem;
-}
-
-#peakMessage {
-    display: none;
-    color: black;
-    font-size: 16px;
-    margin-bottom: 38px;
-}
-
-#priceRange {
-    width: 100%;
-}
-
-.Sign-up-button a {
-    border: 1px solid rgb(0, 184, 217);
-    padding: 0.7rem 1rem 0.8rem;
-    color: rgb(23, 43, 77);
-}
-
-.Sign-up-button a:hover {
-    border: 1px solid rgb(0, 184, 217);
-    background-color: rgb(230, 252, 255);
-    border-color: rgb(0, 184, 217);
-    color: rgb(23, 43, 77);
-}
-
-/* pricing cards-Container End*/
-
-.gradient-section h2 {
-    font-size: 2.25rem;
-    line-height: 1.33333;
-}
-
-.gradient-section {
-    background: url(/assests/images/BigSwingFooterHeroGraphic__Left.svg) left center / contain no-repeat scroll padding-box border-box, url(/assests/images/BigSwingFooterHeroGraphic__Right.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
-}
-
-/* footer-section */
-.footer-section {
-    background-color: rgb(23, 43, 77);
-}
-
-.footer-text :hover {
-    background-color: rgb(52, 69, 99);
-    cursor: pointer;
-}
-
-.border-line {
-    border-top: 1px solid rgb(80, 95, 121);
-}
-
-.footer-icon a {
-    fill: rgb(255, 255, 255);
-    border-radius: 50%;
-    border: 2px solid rgb(255, 255, 255);
-    height: 26px;
-    width: 26px;
-}
-
-.survey_card-section {
-    background: linear-gradient(0deg, rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
-}
-
-.trello_heading_section {
-    background: linear-gradient(rgb(230, 252, 255), rgb(255, 255, 255)) 0% 0% / auto no-repeat scroll padding-box border-box transparent;
-}
-
-/* footer-section End*/
-
 /* Media Query */
 @media screen and (max-width: 1197.7px) {
-    .py-120 {
-        padding-top: 160px;
-        padding-bottom: 60px;
-    }
-
     h1 {
         font-size: 3rem;
         line-height: 1.25;
     }
-
 
     h3 {
         font-size: 20px;
@@ -520,39 +295,20 @@ p {
     p {
         font-size: 19px;
     }
-
-    .fs-12 {
-        line-height: 1.7;
-        font-size: 10px;
-    }
-
-    .fs-16 {
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-
-    .fs-18 {
-        font-size: 14px;
-    }
-
-    .fs-20 {
-        font-size: 18px;
-        line-height: 30px;
-    }
-
-    .btn {
-        padding: 13px 24px;
-    }
 }
 
 @media screen and (max-width: 991.7px) {
+    .py-80{
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
     h1 {
-        font-size: 2.75rem;
+        font-size: 2.4rem;
         line-height: 1.18182;
     }
 
     h2 {
-        font-size: 2.25rem;
+        font-size: 1.5rem;
     }
 
     h3 {
@@ -562,57 +318,37 @@ p {
     p {
         font-size: 16px;
     }
-    .btn {
-        padding: 13px 24px;
+    .fs-13 {
+        font-size: 11px;
     }
-    .fs-12 {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-    .fs-16 {
+    .fs-14 {
         font-size: 16px;
-        margin-bottom: 0;
     }
-
     .fs-20 {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 16px;
     }
 
-    .fs-24 {
-        font-size: 23px;
-        line-height: 1.5;
+    .fs-22 {
+        font-size: 16px;
     }
-
-    .swiper-text h3 {
-        font-size: 2.1rem;
-        line-height: 1.33333;
+    .fs-32 {
+        font-size: 26px;
     }
-
-    .survey img {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .blog_icon_b,
-    .blog_icon_a {
-        display: none;
-    }
-
-    .border-line-top,
-    .border-line-bottom {
-        border-bottom: 1px solid rgb(80, 95, 121);
+    .img-text {
+        justify-content: center;
         width: 100%;
     }
-
-    .border-line {
+    .swiper-button-next,
+    .swiper-button-prev {
         display: none;
     }
-
-    .gradient-section-md {
-        background: linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto repeat scroll padding-box border-box rgb(82, 67, 170);
-        background-blend-mode: normal;
+    .bg-image_huawei,
+    .bg-image_partner {
+        padding: 134px;
+    }
+    .card-content {
+        top: 37px;
+        left: 8px;
     }
 }
 
@@ -624,69 +360,75 @@ p {
     h2 {
         font-size: 26px;
     }
+
     h3 {
         font-size: 1rem;
     }
+
     p {
         font-size: 15px;
     }
 
-    .btn {
-        padding: 13px 24px;
+    .img-text {
         width: 100%;
+        justify-content: center;
     }
-
+    .pc_padding {
+        padding: 0px 20px;
+    }
 }
 
 @media screen and (max-width: 575.7px) {
-    .py-120 {
-        padding-top: 100px;
-        padding-bottom: 40px;
+    .py-80 {
+        padding-top: 90px;
     }
-
-    .py-20 {
-        padding-top: 20px;
-        padding-bottom: 5px;
-    }
-
     h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     h2 {
+        font-size: 22px;
+    }
+
+    h3 {
         font-size: 24px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .btn {
-        padding: 13px 24px;
-        width: 100%;
+        padding: 6px 16px;
+        border: none;
     }
+
     .fs-16 {
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 0;
     }
-    .fs-20 {
+
+    .fs-28 {
         font-size: 18px;
-        line-height: 30px;
     }
-    
-    .swiper-text h3 {
-        font-size: 1.4rem;
-        line-height: 1.33333;
+
+    .fs-20 {
+        font-size: 12px;
     }
-    .gradient-section h2 {
-        font-size: 1.5rem;
-        line-height: 1.33333;
+    .fs-32 {
+        font-size: 18px;
     }
-    .form-control {
-        display: none;
+    .pc_padding {
+        padding: 0 8px;
     }
-    .swiper-nav-wrapper {
-        right: 80px;
-        z-index: 1;
+    .bg-image_huawei, .bg-image_partner {
+        padding: 77px;
+    }
+    .card-content {
+        top: 12px;
+        left: -43px;
+    }
+    .learn_more_btn {
+        padding: 10px 18px;
     }
 }
