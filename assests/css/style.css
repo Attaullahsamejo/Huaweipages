@@ -281,6 +281,7 @@ p {
     color: #000;
     opacity: 1;
 }
+
 /* Media Query */
 @media screen and (max-width: 1197.7px) {
     h1 {
@@ -350,6 +351,7 @@ p {
         top: 37px;
         left: 8px;
     }
+
 }
 
 @media screen and (max-width: 767.97px) {
