@@ -137,6 +137,7 @@ p {
 .text_crimson {
     color: crimson;
 }
+
 .fs-13 {
     font-size: 13px;
 }
@@ -190,7 +191,6 @@ p {
 }
 
 .series-banner-text {
-    font-size: 14px;
     top: 8px;
     left: 8px;
 }
@@ -228,12 +228,14 @@ p {
     background-size: cover;
     aspect-ratio: 2.35/1;
 }
+
 .explore_img_b {
     background-image: url('/assests/images/accessories.jpg');
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .logo {
     max-width: 40%;
 }
@@ -287,7 +289,8 @@ p {
     cursor: auto;
     pointer-events: none;
 }
- /* footer-section */
+
+/* footer-section */
 .footer a {
     line-height: 24px;
     color: #767676;
@@ -308,7 +311,8 @@ p {
     color: #000;
     opacity: 1;
 }
- /* footer-section End */
+
+/* footer-section End */
 /* Media Query */
 @media screen and (max-width: 1197.7px) {
     h1 {
@@ -493,7 +497,7 @@ p {
     }
 
     .series-banner-text p {
-        font-size: 7px;
+        font-size: 8px;
     }
 
     .learn_more_btn {
@@ -504,4 +508,18 @@ p {
     .explore_img_b {
         aspect-ratio: 1;
     }
+}
+@media screen and (max-width: 375px) {
+.img-text {
+    right: 75px;
+}
+}
+@media screen and (max-width: 320px) {
+.card_img{
+        max-width: 260px;
+    }
+    .img-text {
+        right: 50px;
+    }
+
 }
