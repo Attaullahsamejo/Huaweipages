@@ -183,7 +183,9 @@ p {
     top: 8px;
     left: 8px;
 }
-
+.series-banner-text p{
+    font-size: 16px;
+}
 .arrow_down {
     right: 10px;
     bottom: 10px;
@@ -224,11 +226,15 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     cursor: pointer;
 }
-.explore_img{
+
+.explore_img_b{
     background-image: url('/assests/images/accessories.jpg');
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
-    height: 75%;
+    background-repeat: no-repeat;
+}
+.card_img{
+    max-width: 300px;
 }
 .swiper-button-prev {
     padding: 24px;
@@ -339,6 +345,9 @@ p {
         justify-content: center;
         width: 100%;
     }
+    .series-banner-text p{
+        font-size: 13px;
+    }
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
@@ -351,7 +360,28 @@ p {
         top: 37px;
         left: 8px;
     }
-
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 2;
+  }
+  .explore_img_b{
+    background-image: url('/assests/images/accessories.jpg');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bg-image{
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 }
 
 @media screen and (max-width: 767.97px) {
@@ -430,7 +460,14 @@ p {
         top: 12px;
         left: -43px;
     }
+    .series-banner-text p{
+        font-size: 7px;
+    }
     .learn_more_btn {
         padding: 10px 18px;
+    }
+    .bg-image,
+    .explore_img_b{
+        aspect-ratio: 1;
     }
 }
