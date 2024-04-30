@@ -137,6 +137,9 @@ p {
 .text_crimson {
     color: crimson;
 }
+.fs-13 {
+    font-size: 13px;
+}
 
 .fs-14 {
     font-size: 14px;
@@ -145,10 +148,6 @@ p {
 .fs-16 {
     font-size: 16px;
     margin-bottom: 0;
-}
-
-.fs-13 {
-    font-size: 13px;
 }
 
 .fs-18 {
