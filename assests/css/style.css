@@ -30,10 +30,12 @@ img {
     width: auto;
     height: auto;
 }
+
 .link,
-.navbar-nav a{
+.navbar-nav a {
     position: relative;
 }
+
 .link::after,
 .navbar-nav a::after {
     content: '';
@@ -45,12 +47,13 @@ img {
     left: 0;
     transform: scaleX(0);
 }
+
 .link:hover::after,
-.navbar-nav a:hover::after{
+.navbar-nav a:hover::after {
     transform: scaleX(1);
 }
 
-.nav-section { 
+.nav-section {
     z-index: 30;
 }
 
@@ -78,9 +81,11 @@ img {
     font-size: 13px;
     line-height: 20px;
 }
-.pc_padding{
+
+.pc_padding {
     padding: 0 28px;
 }
+
 .btn:hover {
     color: 0;
     background-color: white;
@@ -88,7 +93,7 @@ img {
 }
 
 .link::after {
-    transition: .3s cubic-bezier(.4,0,.6,1);
+    transition: .3s cubic-bezier(.4, 0, .6, 1);
 }
 
 h1 {
@@ -116,10 +121,11 @@ h4 {
     line-height: 24px;
 }
 
-h5{
+h5 {
     font-size: 1rem;
     line-height: 24px;
 }
+
 p {
     font-size: 1.25rem;
     font-style: normal;
@@ -160,10 +166,12 @@ p {
 .fs-28 {
     font-size: 28px;
 }
+
 .fs-32 {
     font-size: 32px;
     line-height: 45px;
 }
+
 .header_section_Card {
     background: whitesmoke;
 }
@@ -173,19 +181,23 @@ p {
     color: white;
     background-color: cornflowerblue;
 }
-.card-content{
+
+.card-content {
     top: 64px;
     padding: 0 64px;
     left: 30px;
 
 }
+
 .series-banner-text {
     top: 8px;
     left: 8px;
 }
-.series-banner-text p{
+
+.series-banner-text p {
     font-size: 16px;
 }
+
 .arrow_down {
     right: 10px;
     bottom: 10px;
@@ -203,23 +215,32 @@ p {
     background-position: center;
     background-size: cover;
 }
-.logo{
-    max-width: 40%;
-}
+
 .bg-image_huawei {
     background-image: url('/assests/images/smart-office.jpg');
     background-size: cover;
-    padding: 215px;
+    aspect-ratio: 2.35/1;
 }
 
 .bg-image_partner {
     background-image: url('/assests/images/trusted-partner.jpg');
     background-size: cover;
-    padding: 215px;
+    aspect-ratio: 2.35/1;
 }
-.text-color{
+.explore_img_b {
+    background-image: url('/assests/images/accessories.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo {
+    max-width: 40%;
+}
+
+.text-color {
     color: rgba(255, 255, 255, 0.99);
 }
+
 .container-grid {
     display: grid;
     grid-gap: 8px;
@@ -227,15 +248,10 @@ p {
     cursor: pointer;
 }
 
-.explore_img_b{
-    background-image: url('/assests/images/accessories.jpg');
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.card_img{
+.card_img {
     max-width: 300px;
 }
+
 .swiper-button-prev {
     padding: 24px;
     color: white;
@@ -270,24 +286,28 @@ p {
     cursor: auto;
     pointer-events: none;
 }
-.footer a{
+ /* footer-section */
+.footer a {
     line-height: 24px;
     color: #767676;
 }
-.line{
-    background-color:#ccc !important;
+
+.line {
+    background-color: #ccc;
     margin: 2rem;
 }
-.footer_icon li{
+
+.footer_icon li {
     margin-right: 20px;
     font-size: 24px;
     opacity: .3;
 }
-.footer_icon li:hover{
+
+.footer_icon li:hover {
     color: #000;
     opacity: 1;
 }
-
+ /* footer-section End */
 /* Media Query */
 @media screen and (max-width: 1197.7px) {
     h1 {
@@ -305,10 +325,11 @@ p {
 }
 
 @media screen and (max-width: 991.7px) {
-    .py-80{
+    .py-80 {
         padding-top: 100px;
         padding-bottom: 40px;
     }
+
     h1 {
         font-size: 2.4rem;
         line-height: 1.18182;
@@ -325,12 +346,15 @@ p {
     p {
         font-size: 16px;
     }
+
     .fs-13 {
         font-size: 11px;
     }
+
     .fs-14 {
         font-size: 16px;
     }
+
     .fs-20 {
         font-size: 16px;
     }
@@ -338,50 +362,56 @@ p {
     .fs-22 {
         font-size: 16px;
     }
+
     .fs-32 {
         font-size: 26px;
     }
+
     .img-text {
         justify-content: center;
         width: 100%;
     }
-    .series-banner-text p{
+
+    .series-banner-text p {
         font-size: 13px;
     }
+
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
     }
-    .bg-image_huawei,
-    .bg-image_partner {
-        padding: 134px;
-    }
+
     .card-content {
         top: 37px;
         left: 8px;
     }
-.container-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.box1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    z-index: 2;
-  }
-  .explore_img_b{
-    background-image: url('/assests/images/accessories.jpg');
-    background-position: bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.bg-image{
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        z-index: 2;
+    }
+
+    .explore_img_b {
+        background-image: url('/assests/images/accessories.jpg');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .bg-image {
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
 }
 
 @media screen and (max-width: 767.97px) {
@@ -405,6 +435,7 @@ p {
         width: 100%;
         justify-content: center;
     }
+
     .pc_padding {
         padding: 0px 20px;
     }
@@ -414,6 +445,7 @@ p {
     .py-80 {
         padding-top: 90px;
     }
+
     h1 {
         font-size: 26px;
     }
@@ -447,27 +479,30 @@ p {
     .fs-20 {
         font-size: 12px;
     }
+
     .fs-32 {
         font-size: 18px;
     }
+
     .pc_padding {
         padding: 0 8px;
     }
-    .bg-image_huawei, .bg-image_partner {
-        padding: 77px;
-    }
+
     .card-content {
         top: 12px;
         left: -43px;
     }
-    .series-banner-text p{
+
+    .series-banner-text p {
         font-size: 7px;
     }
+
     .learn_more_btn {
         padding: 10px 18px;
     }
+
     .bg-image,
-    .explore_img_b{
+    .explore_img_b {
         aspect-ratio: 1;
     }
 }
