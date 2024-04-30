@@ -163,8 +163,8 @@ p {
     font-size: 22px;
 }
 
-.fs-28 {
-    font-size: 28px;
+.fs-26 {
+    font-size: 26px;
 }
 
 .fs-32 {
@@ -177,7 +177,8 @@ p {
 }
 
 .img-text {
-    float: inline-end;
+    right: 0px;
+    bottom: 0px;
     color: white;
     background-color: cornflowerblue;
 }
@@ -190,6 +191,7 @@ p {
 }
 
 .series-banner-text {
+    font-size: 14px;
     top: 8px;
     left: 8px;
 }
@@ -368,8 +370,7 @@ p {
     }
 
     .img-text {
-        justify-content: center;
-        width: 100%;
+        right: 230px;
     }
 
     .series-banner-text p {
@@ -432,8 +433,7 @@ p {
     }
 
     .img-text {
-        width: 100%;
-        justify-content: center;
+        right: 100px;
     }
 
     .pc_padding {
