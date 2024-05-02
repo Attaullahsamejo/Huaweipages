@@ -493,7 +493,7 @@ p {
 
     .card-content {
         top: 12px;
-        left: -43px;
+        left: -5px;
     }
 
     .series-banner-text p {
@@ -505,8 +505,13 @@ p {
         padding: 10px 18px;
     }
 
-  
-    .bg-image, .explore_img_b {
+    .bg-image_partner,
+    .bg-image_huawei {
+        aspect-ratio: 1.1 / 1;
+    }
+
+    .bg-image,
+    .explore_img_b {
         aspect-ratio: 1.35 / 2;
     }
 }
@@ -515,15 +520,6 @@ p {
 @media screen and (max-width: 375px) {
     .img-text {
         right: 75px;
-    }
-
-    .bg-image_huawei,
-    .bg-image_huawei {
-        aspect-ratio: 2.5 / 1;
-    }
-
-    .fs-32 {
-        font-size: 16px;
     }
 }
 
@@ -536,15 +532,12 @@ p {
         right: 50px;
     }
 
-    .bg-image_huawei,
-    .bg-image_huawei {
-        aspect-ratio: 2.5 / 1;
-    }
-    .fs-14,
-    .fs-32 {
+    .fs-14 {
         font-size: 13px;
     }
-    .bg-image, .explore_img_b {
+
+    .bg-image,
+    .explore_img_b {
         aspect-ratio: 1.1 / 2;
     }
 
