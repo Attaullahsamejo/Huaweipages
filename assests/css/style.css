@@ -498,6 +498,7 @@ p {
 
     .series-banner-text p {
         font-size: 8px;
+        line-height: 1.6;
     }
 
     .learn_more_btn {
