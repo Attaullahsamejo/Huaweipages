@@ -517,7 +517,7 @@ p {
 
     .bg-image_partner,
     .bg-image_huawei {
-        aspect-ratio: 1.1 / 1;
+        aspect-ratio: 4/3;
     }
 
     .bg-image,
