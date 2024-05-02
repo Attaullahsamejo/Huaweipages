@@ -182,12 +182,15 @@ p {
     color: white;
     background-color: cornflowerblue;
 }
-.img_zoom{
+
+.img_zoom {
     transition: transform .9s;
 }
-.img_zoom:hover{
-    transform: scale(1.1); 
+
+.img_zoom:hover {
+    transform: scale(1.1);
 }
+
 .card-content {
     top: 64px;
     padding: 0 64px;
@@ -384,6 +387,7 @@ p {
     .series-banner-text p {
         font-size: 13px;
     }
+
     .series-banner-text .text-size {
         font-size: 16px;
     }
@@ -508,9 +512,11 @@ p {
         font-size: 8px;
         line-height: 1.6;
     }
+
     .series-banner-text .text-size {
         font-size: 16px;
     }
+
     .learn_more_btn {
         padding: 10px 18px;
     }
@@ -544,6 +550,10 @@ p {
 
     .fs-14 {
         font-size: 13px;
+    }
+
+    .fs-32 {
+        font-size: 18px;
     }
 
     .bg-image,
