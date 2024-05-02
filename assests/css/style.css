@@ -182,7 +182,12 @@ p {
     color: white;
     background-color: cornflowerblue;
 }
-
+.img_zoom{
+    transition: transform .9s;
+}
+.img_zoom:hover{
+    transform: scale(1.1); 
+}
 .card-content {
     top: 64px;
     padding: 0 64px;
