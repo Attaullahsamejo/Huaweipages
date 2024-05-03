@@ -170,8 +170,6 @@ p {
 
 .img-text {
     right: 0px;
-    bottom: 0px;
-    color: white;
     background-color: cornflowerblue;
 }
 
@@ -207,8 +205,6 @@ p {
 .arrow_down svg {
     background-image: url('/assests/images/arrow_doen.svg');
     padding: 20px;
-    background-color: black;
-    border-radius: 30px;
 }
 
 .bg-image {
@@ -245,8 +241,6 @@ p {
 }
 
 .container-grid {
-    display: grid;
-    grid-gap: 8px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     cursor: pointer;
 }
